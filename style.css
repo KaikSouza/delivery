@@ -6,8 +6,23 @@
 }
 
 
-
-
+.container{
+    margin-top: 100px;
+}
+.container table{
+    color: white;
+    text-align: center;
+}
+.container table tr th{
+    background: #272727;
+    width: 100px;
+    height: 50px;
+}
+.container table tr td{
+        background: #B21E35;
+        width: 100px;
+        height: 50px;
+}
 .navbar{
     background-color: #B21E35;
     color: white;

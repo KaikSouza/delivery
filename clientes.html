@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/iconesite.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="libs/fontawesome/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.css">
     <link rel="stylesheet" href="style.css">
     <title>Clientes</title>
 </head>
@@ -18,11 +18,11 @@
 
         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" arial-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
             
-            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggler-icon"></span>
 
         </button>
 
-        <div id="my-nav" class="collpase navbar-collpase">
+        <div id="my-nav" class="collpase navbar-collapse">
 
             <ul class="navbar-nav mr-auto">
 
@@ -35,19 +35,77 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-white"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+                    <a href="#" class="nav-link text-white"><i class="fa-solid fa-power-off"></i> Sair</a>
                 </li>
             </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Pesquisar</button>
+              </form>
         </div>
     </nav>
 
-    <div id="content" class="container mt-5">
-        <div class="row mt-5">
-            <div class="col-12 mt-5">
-                <h4 class="text-center text-warning">
-                    Bem-vindo ao Gerenciamento de Rifas
-                </h4>
-                <img src="img/ticket2.jpg" alt="e-rifas" class="img-fluid">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-6 col-md-5">
+
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                           Chapéu
+                        </td>
+                        <td>
+                            R$25.00
+                        </td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                           Chapéu
+                        </td>
+                        <td>
+                            R$25.00
+                        </td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                           Chapéu
+                        </td>
+                        <td>
+                            R$25.00
+                        </td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    </tr>
+                </table>
+
             </div>
         </div>
     </div>

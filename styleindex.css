@@ -1,0 +1,19 @@
+.container{
+    margin-top: 250px;
+}
+.card{
+    background-color: black;
+    opacity: 85%;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn{
+    background: transparent;
+    border-color: white;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background: transparent;
+}

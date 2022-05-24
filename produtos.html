@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/iconesite.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="libs/fontawesome/css/all.css">
-    <link rel="stylesheet" href="styleclientes.css">
+    <link rel="stylesheet" href="styleprodutos.css">
     <title>Clientes</title>
 </head>
 
@@ -31,7 +31,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-white"><i class="fa-solid fa-user"></i> Clientes</a>
+                    <a href="produtos.html" class="nav-link text-white"><i class="fa-solid fa-list-ol"></i> Produtos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="src/clientes/visao/clientes.html" class="nav-link text-white"><i class="fa-solid fa-user"></i> Clientes</a>
                 </li>
 
                 <li class="nav-item">
@@ -46,86 +50,46 @@
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-6 col-md-5">
-
-                <table class="table table-striped table-dark">
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Preço</th>
-                        <th>Ações</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            1
-                        </td>
-                        <td>
-                           Chapéu
-                        </td>
-                        <td>
-                            R$25.00
-                        </td>
-                        <td>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            <i class="fa-solid fa-trash"></i>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            2
-                        </td>
-                        <td>
-                           Ursinho
-                        </td>
-                        <td>
-                            R$40.00
-                        </td>
-                        <td>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            <i class="fa-solid fa-trash"></i>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            3
-                        </td>
-                        <td>
-                           Lápis
-                        </td>
-                        <td>
-                            R$1.50
-                        </td>
-                        <td>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            <i class="fa-solid fa-trash"></i>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            4
-                        </td>
-                        <td>
-                           Caderno
-                        </td>
-                        <td>
-                            R$25.00
-                        </td>
-                        <td>
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            <i class="fa-solid fa-trash"></i>
-                        </td>
-                    </tr>
-                </table>
-
-            </div>
-        </div>
+    <div id="content" class="container mt-2">
+        <div class="row mt-5">
+          <div class="col-12 mt-5">
+              <div class="card shadow mt-5">
+                  <div class="card-header">
+                      <div class="card-title">
+                          <div class="row">
+                              <div class="col-12 col-md-9">
+                                  <h4 class="text-dark">Produtos</h4>
+                              </div>
+                              <div class="col-12 col-md-2">
+                                  <button class="btn btn-success btn-block">CADASTRAR</button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-body">
+                          <div class="card-responsive">
+                              <table class="table table-hover table-striped table-dark table-borderless" id="table-produto">
+                                  <tr>
+                                      <th scope="col" class="text-center">ID</th>
+                                      <th scope="col" class="text-center">NOME</th>
+                                      <th scope="col" class="text-center">PREÇO</th>
+                                      <th scope="col" class="text-center">AÇÃO</th>
+                                  </tr>
+                                  <tr>
+                                      <td>1</td>
+                                      <td>Chapéu</td>
+                                      <td>R$25.00</td>
+                                      <td><button class="btn btn-info">EDITAR</button> <button class="btn btn-danger">EXCLUIR</button></td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </div>
 
+    <script src="js/menu.js"></script>
     <script src="js/jquery-3.6.0.js"></script>
     <script src="js/bootstrap.js"></script>
 

@@ -1,98 +1,61 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/iconesite.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="libs/fontawesome/css/all.css">
-    <link rel="stylesheet" href="styleprodutos.css">
-    <title>Clientes</title>
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow">
-
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" arial-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-            
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div id="my-nav" class="collpase navbar-collapse">
-
-            <ul class="navbar-nav mr-auto">
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-white"><i class="fa-solid fa-house"></i> Home</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="produtos.html" class="nav-link text-white"><i class="fa-solid fa-list-ol"></i> Produtos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="src/clientes/visao/clientes.html" class="nav-link text-white"><i class="fa-solid fa-user"></i> Clientes</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-white"><i class="fa-solid fa-power-off"></i> Sair</a>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </form>
+<div class="row mt-5">
+    <div class="col-12 mt-5">
+        <div class="card shadow mt-5">
+            <div class="card-header">
+                <div class="card-title">
+                    <div class="row">
+                        <div class="col-12 col-md-9">
+                            <h4 class="text-dark">Produtos</h4>
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <button class="btn btn-success btn-block">NOVO PRODUTO</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-responsive">
+                        <table class="table table-hover table-striped table-dark table-borderless" id="table-produto">
+                            <tr>
+                                <th scope="col" class="text-center">ID</th>
+                                <th scope="col" class="text-center">NOME</th>
+                                <th scope="col" class="text-center">PREÇO</th>
+                                <th scope="col" class="text-center">AÇÃO</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Chapéu</td>
+                                <td>R$25.00</td>
+                                <td><button class="btn btn-info"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button></td>
+                            </tr>
+                            <tr></tr>
+                                <td>2</td>
+                                <td>Caneta</td>
+                                <td>R$1.00</td>
+                                <td><button class="btn btn-info"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
-
-    <div id="content" class="container mt-2">
-        <div class="row mt-5">
-          <div class="col-12 mt-5">
-              <div class="card shadow mt-5">
-                  <div class="card-header">
-                      <div class="card-title">
-                          <div class="row">
-                              <div class="col-12 col-md-9">
-                                  <h4 class="text-dark">Produtos</h4>
-                              </div>
-                              <div class="col-12 col-md-2">
-                                  <button class="btn btn-success btn-block">CADASTRAR</button>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="card-body">
-                          <div class="card-responsive">
-                              <table class="table table-hover table-striped table-dark table-borderless" id="table-produto">
-                                  <tr>
-                                      <th scope="col" class="text-center">ID</th>
-                                      <th scope="col" class="text-center">NOME</th>
-                                      <th scope="col" class="text-center">PREÇO</th>
-                                      <th scope="col" class="text-center">AÇÃO</th>
-                                  </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>Chapéu</td>
-                                      <td>R$25.00</td>
-                                      <td><button class="btn btn-info">EDITAR</button> <button class="btn btn-danger">EXCLUIR</button></td>
-                                  </tr>
-                              </table>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
     </div>
+</div>
 
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/menu.js"></script>
-
-</body>
-
-</html>
+<div id="modal-clientes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="my-modal-title">Title</h5>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Content</p>
+            </div>
+            <div class="modal-footer">
+                Footer
+            </div>
+        </div>
+    </div>
+</div>

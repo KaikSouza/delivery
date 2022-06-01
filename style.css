@@ -25,12 +25,54 @@ i{
     border-radius: 3px;
 }
 
-.card{
+.card-produtos{
     transition: 0.5s ease;
     overflow: hidden;
     transform: translate(0);
 }
 
-.card:hover{
+.card-produtos:hover{
     transform: scale(1.09);
+}
+
+.modal-clientes{
+    border-radius: 10px;
+}
+
+.input-group{
+    transition: 0.5s ease;
+}
+
+.input-group:hover{
+    transform: scale(1.05);
+}
+
+input:focus{
+    box-shadow: none;
+    border: #0069f1;
+}
+
+.header-produtos{
+    background-color: #B21E35;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.footer-produtos{
+    background-color: #B21E35;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 20px;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.list-group-item{
+    color: white;
+    background-color: #323539;
+    padding: 10px;
 }

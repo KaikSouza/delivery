@@ -2,54 +2,57 @@
     <div class="col-12 mt-5">
         <div class="card shadow mt-5">
             <div class="card-header">
-                <div class="card-title">
-                    <div class="row">
-                        <div class="col-12 col-md-2">
-                            <button class="btn btn-success btn-block btn-novo">NOVO CLIENTE</button>
+                    <div class="card-title">
+                        <div class="row mb-4">
+                            <div class="col-12 col-md-9">
+                                <h4 class="text-dark">Produtos</h4>
+                            </div>
+                            <div class="col-12 col-md-2">
+                                <button class="btn btn-success btn-block btn-novo">NOVO PRODUTO</button>
+                            </div>
                         </div>
-                        </div>
-        <div class="card-deck">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Lápis</h5>
-                <ul>
-                    <li>ID: 1</li>
-                    <li>PREÇO: R$25.00</li>
-                    <li>CATEGORIA: Papelaria</li>
-                </ul>
-                <button class="btn btn-info"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                    <h5 class="card-title">Caderno</h5>
-                    <ul>
-                        <li>ID: 2</li>
-                        <li>PREÇO: R$20.00</li>
-                        <li>CATEGORIA: Papelaria</li>
-                    </ul>
-                    <button class="btn btn-info"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                    <h5 class="card-title">Caixa de som</h5>
-                    <ul>
-                        <li>ID: 3</li>
-                        <li>PREÇO: R$30.00</li>
-                        <li>CATEGORIA: Eletrônico</li>
-                    </ul>
-                    <button class="btn btn-info"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button>
-              </div>
-            </div>
-          </div>
+                    </div>
+              <div class="card-deck">
+                  <div class="card card-produtos">
+                      <div class="header header-produtos"><h5>Caderno</h5></div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">ID: 1</li>
+                          <li class="list-group-item">PREÇO: R$25.00</li>
+                          <li class="list-group-item">CATEGORIA: Papelaria</li>
+                      </ul>
+                    </div>
+                    <div class="footer-dark footer-produtos"></div>
+                  </div>
+                  <div class="card card-produtos">
+                      <div class="header header-produtos"><h5>Caixa de som</h5></div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">ID: 2</li>
+                          <li class="list-group-item">PREÇO: R$35.00</li>
+                          <li class="list-group-item">CATEGORIA: Eletrônico</li>
+                      </ul>
+                    </div>
+                    <div class="footer-dark footer-produtos"></div>
+                  </div>
+                  <div class="card card-produtos">
+                      <div class="header header-produtos"><h5>Escudo de plástico</h5></div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush">
+                          <li class="list-group-item">ID: 3</li>
+                          <li class="list-group-item">PREÇO: R$15.00</li>
+                          <li class="list-group-item">CATEGORIA: Brinquedo</li>
+                      </ul>
+                    </div>
+                    <div class="footer-dark footer-produtos"></div>
+                  </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div id="modal-clientes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+<div id="modal-produtos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

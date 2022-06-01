@@ -24,3 +24,13 @@ i{
 .form-control{
     border-radius: 3px;
 }
+
+.card{
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+}
+
+.card:hover{
+    transform: scale(1.09);
+}

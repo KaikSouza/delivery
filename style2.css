@@ -5,7 +5,7 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
-login{
+.login{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -59,7 +59,7 @@ login{
     background: #B21E35;
     border: none;
     border-radius: 15px;
-    box-shadow: 0px 10px 40px #6b1b27;
+    box-shadow: 0px 10px 20px #6b1b27;
     padding: 8px;
     outline: none;
     font-weight: 800;
@@ -76,14 +76,12 @@ login{
 .div-login{
     height: 100vh;
     width: 50vw;
-    border: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .div-wpp{
     display: flex;
-    border: 1px solid #fff;
     height: 100vh;
     width: 50vw;
     justify-content: center;
@@ -91,7 +89,7 @@ login{
 }
 
 .imagem{
-    width: 40vw;
+    width: 35vw;
     transform: translateY(0);
     animation: flutuar 5s ease-in-out infinite;
 }
@@ -114,13 +112,22 @@ login{
     }
 }
 
-@media screen and (max-width: 950px) {
+@media only screen and (max-width: 950px) {
     .card{
-        width: 50vw;
+        width: 80%;
     }
 }
-@media screen and (max-width: 600px){
-    .container{
-        flex-direction: column;
+@media only screen and (max-width: 600px){
+    .div-wpp{
+        display: none;
+    }
+    .div-login{
+        width: 100%;
+    }
+    .card{
+        width: 80%;
+    }
+    .form-group{
+        width: 80vw;
     }
 }

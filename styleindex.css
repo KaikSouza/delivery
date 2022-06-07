@@ -1,21 +1,6 @@
 body{
     background-color: #272727;
 }
-img{
-    transform: translateY(0px);
-    animation: flutuar 5s ease-in-out infinite;
-}
-@keyframes flutuar{
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-15px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
 .card{
     background-color: transparent;
     color: white;
@@ -104,4 +89,10 @@ img{
     position: absolute;
     right: 0;
     top: 14rem;
+}
+
+.div-wpp{
+    position: absolute;
+    left: 10rem;
+    top: 5rem;
 }

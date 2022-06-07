@@ -1,19 +1,26 @@
 body{
     background-color: #272727;
+    margin: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     background-color: transparent;
     color: white;
     border: 1;
     width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
 }
 
 .btn{
     background: #B21E35;
     border-color: #B21E35;
     border-radius: 10px;
+    box-shadow: 0px 10px 40px #6b1b27;
 }
 
 .btn:hover{
@@ -22,17 +29,24 @@ body{
 }
 
 .div-login{
-    position: absolute;
-    right: 0;
-    top: 14rem;
+    height: 100vh;
+    width: 50vw;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-wpp{
+    display: flex;
+    border: 1px solid #fff;
+    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
 }
 
-.div-wpp{
-    width: 750px;
-    height: 750px;
-    position: absolute;
-    left: 10rem;
-    top: 5rem;
+.imagem{
+    width: 40vw;
     transform: translateY(0);
     animation: flutuar 5s ease-in-out infinite;
 }
@@ -54,3 +68,12 @@ body{
         transform: translateY(0);
     }
 }
+
+#login, #senha{
+    border: none;
+    border-bottom: 1px solid #888787;
+    background-color: transparent;
+    color: #fff;
+    box-shadow: 0px 1px 15px #474747;
+}
+

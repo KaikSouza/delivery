@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    background-color: #272727;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: #252525;
+    color: white;
+    width: 55%;
+    box-shadow: 10px 10px 15px #0000006b;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0px;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 20vw;
+}
+.form-group > input::placeholder{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+#login, #senha{
+    margin: 6px 0px;
+    background-color: #272727ad;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0px 1px 10px #313131;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn{
+    width: 100%;
+    color: white;
+    background: #B21E35;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 10px 40px #6b1b27;
+    padding: 8px;
+    outline: none;
+    font-weight: 800;
+    font-size: 15px;
+    cursor:pointer;
+    letter-spacing: 2px;
+}
+
+.btn:hover{
+    background: #B21E35;
+    border: #B21E35;
+}
+
+.div-login{
+    height: 100vh;
+    width: 50vw;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div-wpp{
+    display: flex;
+    border: 1px solid #fff;
+    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagem{
+    width: 40vw;
+    transform: translateY(0);
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+.card-title{
+    text-align: center;
+}
+@keyframes flutuar{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    75%{
+        transform: translateY(5);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .card{
+        width: 50vw;
+    }
+}
+@media screen and (max-width: 600px){
+    .container{
+        flex-direction: column;
+    }
+}

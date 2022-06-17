@@ -1,41 +1,19 @@
-<div class="row mt-5">
-    <div class="col-12 mt-5">
-        <div class="card shadow mt-5">
-            <div class="card-header">
-                <div class="card-title">
-                    <div class="row">
-                        <div class="col-12 col-md-9">
-                            <h4 class="text-dark">Clientes</h4>
-                        </div>
-                        <div class="col-12 col-md-2">
-                            <button class="btn btn-success btn-block btn-novo">NOVO CLIENTE</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-responsive">
-                        <table class="table table-hover table-striped table-dark table-borderless" id="table-produto">
-                            <tr>
-                                <th scope="col" class="text-center">ID</th>
-                                <th scope="col" class="text-center">NOME</th>
-                                <th scope="col" class="text-center">AÇÃO</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Ana</td>
-                                <td><button class="btn btn-info btn-editar"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button> <button class="btn btn-success btn-excluir"><i class="fa-solid fa-circle-plus"></i> NOVO PEDIDO</button></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Gustavo</td>
-                                <td><button class="btn btn-info btn-editar"><i class="fa-solid fa-pen"></i> EDITAR</button> <button class="btn btn-danger btn-excluir"><i class="fa-solid fa-trash"></i> EXCLUIR</button> <button class="btn btn-success btn-excluir"><i class="fa-solid fa-circle-plus"></i> NOVO PEDIDO</button></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class = "cadastrar-cliente">
+    <form>
+        <label for="nome">
+            <input type="text" class="nome" id="nome">
+        </label>
+        <label for="celular">
+            <input type="text" class="celular" id="celular">
+        </label>
+        <label for="nome">
+            <input type="text" class="email" id="email">
+        </label>
+    </form>
+</div>
+
+<div class = "tabela-cliente">
+
 </div>
 
 <div id="modal-clientes" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">

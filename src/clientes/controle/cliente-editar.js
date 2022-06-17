@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('.btn-editar').click(function(e) {
+    $('.editar-cliente').click(function(e) {
         e.preventDefault()
 
         //Limpar todas as informações existentes na nossa modal

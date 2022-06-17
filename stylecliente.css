@@ -4,7 +4,6 @@ body{
     background-color: #272727;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    color: white;
     font-weight: 800;
     letter-spacing: 2px;
 }
@@ -108,7 +107,7 @@ i{
 }
 
 
-input{
+.formulario-cliente input{
     display: flex;
     padding: 10px;
     margin: 2px;
@@ -123,38 +122,22 @@ input{
     transition: 0.5s ease;
 }
 
-input:hover{
+.formulario-cliente input:hover{
     transform: scale(1.03);
 }
 
-.nome{
+.formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logadouro{
     width: 30vw;
 }
 
-.celular{
-    width: 30vw;
-}
-
-.email{
-    width: 30vw;
-}
-
-.logadouro{
-    width: 30vw;
-}
-
-.cep{
+.formulario-cliente .cep, .formulario-cliente .cidade{
     width: 15vw;
 }
 
-.cidade{
-    width: 15vw;
-}
-
-.bairro{
+.formulario-cliente .bairro{
     width: 17vw;
 }
 
-.numero{
+.formulario-cliente .numero{
     width: 12vw;
 }

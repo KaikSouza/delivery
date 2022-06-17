@@ -44,6 +44,9 @@ input{
     display: flex;
     padding: 5px;
     margin: 2px;
+    border-radius: 15px;
+    background-color: #202020;
+    color: white;
 }
 .nome{
     width: 30vw;

@@ -5,7 +5,7 @@ $(document).ready(function(){
 
         Swal.fire({
             icon: 'success',
-            title: 'Cliente salvo com sucesso!',
+            title: 'Cliente cadastrado com sucesso!',
             showConfirmButton: false,
             timer: 1500
           })

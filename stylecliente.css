@@ -5,70 +5,156 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
+
 .cadastrar-cliente{
     margin-top: 6rem;
 }
+.cliente{
+    box-shadow: 10px 10px 15px #0000006b;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #202020;
+    margin-top: 5rem;
+}
+
+.tabela-cliente{
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+    border-radius: 5px;
+    color: #fff;
+}
+.tabela-cliente th{
+    width: 15vw;
+}
+.tabela-cliente td{
+    background-color: #2c2c2c;
+    padding: 8px;
+}
+
+
 .cadastrar-cliente h2::after{
     content: '';
     display: block;
-    width: 16.2rem;
+    width: 18.2rem;
     height: 0.1rem;
     background-color: #B21E35;
     margin: 0 auto;
     position: absolute;
 }
+.cliente h2::after{
+    content: '';
+    display: block;
+    width: 22.2rem;
+    height: 0.1rem;
+    background-color: #B21E35;
+    margin: 0 auto;
+    position: absolute;
+}
+
 .formulario-cliente{
     display: flex;
     padding: 20px;
     margin: 10px;
 }
+
 .botao{
     display: flex;
     justify-content: right;
     margin-top: 0;
     margin-right: 5rem;
 }
+
 .novo-cliente{
     border-radius: 15px;
-    padding: 6px;
+    padding: 8px;
     border: none;
     background-color: #00b615;
     color: white;
     width: 10vw;
+    font-weight: 800;
+    font-size: 15px;
+    cursor:pointer;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
 }
+
+.novo-cliente:hover{
+    transform: scale(1.05);
+
+}
+.excluir-cliente{
+    color: #fff;
+    background-color: #c40824;
+    border-radius: 5px;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+.editar-cliente{
+    color: #fff;
+    background-color: #0167ff;
+    border-radius: 5px;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+
 i{
     padding:2px;
 }
+
+
 input{
     display: flex;
-    padding: 5px;
+    padding: 10px;
     margin: 2px;
     border-radius: 15px;
     background-color: #202020;
     color: white;
+    box-shadow: 5px 5px 5px #0000006b;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    transition: 0.5s ease;
 }
+
+input:hover{
+    transform: scale(1.03);
+}
+
 .nome{
     width: 30vw;
 }
+
 .celular{
     width: 30vw;
 }
+
 .email{
     width: 30vw;
 }
+
 .logadouro{
     width: 30vw;
 }
+
 .cep{
     width: 15vw;
 }
+
 .cidade{
     width: 15vw;
 }
+
 .bairro{
     width: 17vw;
 }
+
 .numero{
     width: 12vw;
 }

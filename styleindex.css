@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body{
     background-color: #272727;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
-.container{
+.login{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,17 +15,58 @@ body{
     align-items: center;
 }
 .card{
-    background-color: transparent;
+    background-color: #252525;
     color: white;
-    border: 1;
+    width: 55%;
+    box-shadow: 10px 10px 15px #0000006b;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0px;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 20vw;
+}
+.form-group > input::placeholder{
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+#login, #senha{
+    margin: 6px 0px;
+    background-color: #272727ad;
     width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0px 1px 10px #313131;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btn{
+    width: 100%;
+    color: white;
     background: #B21E35;
-    border-color: #B21E35;
-    border-radius: 10px;
-    box-shadow: 0px 10px 40px #6b1b27;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    outline: none;
+    font-weight: 800;
+    font-size: 15px;
+    cursor:pointer;
+    letter-spacing: 2px;
 }
 
 .btn:hover{
@@ -31,14 +77,12 @@ body{
 .div-login{
     height: 100vh;
     width: 50vw;
-    border: 1px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .div-wpp{
     display: flex;
-    border: 1px solid #fff;
     height: 100vh;
     width: 50vw;
     justify-content: center;
@@ -46,7 +90,7 @@ body{
 }
 
 .imagem{
-    width: 40vw;
+    width: 35vw;
     transform: translateY(0);
     animation: flutuar 5s ease-in-out infinite;
 }
@@ -69,11 +113,22 @@ body{
     }
 }
 
-#login, #senha{
-    border: none;
-    border-bottom: 1px solid #888787;
-    background-color: transparent;
-    color: #fff;
-    box-shadow: 0px 1px 15px #474747;
+@media only screen and (max-width: 950px) {
+    .card{
+        width: 80%;
+    }
 }
-
+@media only screen and (max-width: 600px){
+    .div-wpp{
+        display: none;
+    }
+    .div-login{
+        width: 100%;
+    }
+    .card{
+        width: 80%;
+    }
+    .form-group{
+        width: 80vw;
+    }
+}

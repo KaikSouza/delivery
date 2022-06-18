@@ -109,14 +109,10 @@ input{
     color: white;
 }
 
-.nome {
+.input-nome {
     width: 20vw;
 }
 
-.preco {
-    width: 20vw;
-}
-
-.categoria {
+.input-preco {
     width: 20vw;
 }

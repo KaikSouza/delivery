@@ -40,17 +40,17 @@ body{
     position: absolute;
 }
 
-.tabela-produto {
+.tabela {
     justify-content: center;
     display: flex;
     margin-top: 2rem;
 }
 
-.tabela-produto th{
+.tabela th{
     width: 15vw;
 }
 
-.tabela-produto td{
+.tabela td{
     background-color: rgb(36, 36, 36);
     padding: 8px;
 }
@@ -67,6 +67,15 @@ body{
     justify-content: right;
     margin-top: 0;
     margin-right: 10rem;
+}
+
+.novo-produto{
+    border-radius: 15px;
+    padding: 6px;
+    border: none;
+    background-color: #00b615;
+    color: white;
+    width: 10vw;
 }
 
 i{

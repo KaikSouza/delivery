@@ -20,9 +20,8 @@ $qtddeLinhas = $resultado->rowCount();
 $filtro = $requestData['search']['value'];
 if(!empty($filtro)){
     //Montar a expressão lógico em sql para filtrar a nossa tabela
-    $sql .= " AND (id LIKE '$filtro%' ";
-    $sql .= " OR nome LIKE '$filtro%' ";
-    $sql .= " OR preco LIKE '$filtro%') ";
+    $sql .= " AND (idproduto LIKE '$filtro%' ";
+    $sql .= " OR nome LIKE '$filtro%') ";
 }
 
 //Obter o total de registros exixstentes na tabela do banco de dados de acordo com o filtro

@@ -10,7 +10,7 @@ $(document).ready(function(){
             "type": "POST"
         },
         "columns": [{
-            "data": 'id',
+            "data": 'idproduto',
             "classname": 'text-center'
         },
         {
@@ -22,7 +22,7 @@ $(document).ready(function(){
         "classname": 'text-center'
         },
         {
-            "data": 'id',
+            "data": 'idproduto',
             "classname": 'text-center',
             "orderable": false,
             "searchable": false,

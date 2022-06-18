@@ -40,17 +40,17 @@ body{
     position: absolute;
 }
 
-.tabela {
+.table {
     justify-content: center;
     display: flex;
     margin-top: 2rem;
 }
 
-.tabela th{
+.table th{
     width: 15vw;
 }
 
-.tabela td{
+.table td{
     background-color: rgb(36, 36, 36);
     padding: 8px;
 }

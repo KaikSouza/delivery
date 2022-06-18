@@ -12,7 +12,7 @@ $(document).ready(function(){
                 dataType: 'JSON',
                 assync: true,
                 data: dados,
-                url: 'src/produto/modelo/produto-salvar.php',
+                url: 'src/produtos/modelo/produto-salvar.php',
                 success: function(dados) {
 
             Swal.fire({

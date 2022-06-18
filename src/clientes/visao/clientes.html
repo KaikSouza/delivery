@@ -1,7 +1,8 @@
+<form id = "form-cliente">    
     <div class = "cadastrar-cliente">
         <h2>Cadastrar Cliente</h2>
         <div class = "formulario-cliente">
-            <form>
+            <form id = "form-cliente">  
                 <label for="nome">
                     <span><i class="fa-solid fa-user"></i> Nome</span>
                     <input type="text" class="nome" id="nome">
@@ -14,13 +15,13 @@
                     <span><i class="fa-solid fa-at"></i> Email</span>
                     <input type="email" class="email" id="email">
                 </label>
-                <label for="logadouro">
-                    <span><i class="fa-solid fa-road"></i> Logadouro</span>
-                    <input type="text" class="logadouro" id="logadouro">
+                <label for="logradouro">
+                    <span><i class="fa-solid fa-road"></i> Logradouro</span>
+                    <input type="text" class="logradouro" id="logradouro">
                 </label>
                 <label for="cep">
                     <span>CEP</span>
-                    <input type="text" class="cep" id="cep">
+                    <input type="text" class="cep" id="cep" maxlength="9">
                 </label>
                 <label for="cidade">
                     <span><i class="fa-solid fa-city"></i> Cidade</span>
@@ -36,10 +37,12 @@
                 </label>
             </form>
         </div>
+        <input type="hidden" name="idcliente" id="idcliente">
+        <input type="hidden" name="idendereco" id="idendereco">
         <div class="botao">
             <button class="novo-cliente">Cadastrar</button>
         </div>
-    </div>
+    </div>  
 
     <div class = "cliente">
         <h2>Clientes Cadastrados</h2>

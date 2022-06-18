@@ -28,8 +28,8 @@ $(document).ready(function(){
             "searchable": false,
             "render": function(data, type, row, meta){
                 return `
-                <button id ="${data}" class = "btn btn-success btn-visualizar"><i class="fa-solid fa-eye"></i></button>
-                <button id ="${data}" class = "btn btn-info btn-editar"><i class="fa-solid fa-pen"></i></button>
+                <button id ="${data}" class = "btn btn-success visualizar-produto"><i class="fa-solid fa-eye"></i></button>
+                <button id ="${data}" class = "btn btn-info editar-produto"><i class="fa-solid fa-pen"></i></button>
                 <button id ="${data}" class = "btn btn-danger excluir-produto"><i class="fa-solid fa-trash-can"></i></button>
                 `
             }

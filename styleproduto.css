@@ -39,6 +39,9 @@ body{
     margin: 0 auto;
     position: absolute;
 }
+.formulario-produto{
+    padding: 15px;
+}
 .thead{
     background-color: #B21E35;
 }
@@ -51,11 +54,22 @@ body{
     padding: 8px;
 }
 
-.formulario-produto{
+.formulario-produto input{
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 15px;
+    background-color: #202020;
+    color: white;
+    box-shadow: 3px 3px 5px #0000006b;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    transition: 0.5s ease;
+}
+.formulario-produto input:hover{
+    transform: scale(1.02);
 }
 
 .botao{
@@ -78,19 +92,10 @@ i{
     padding:2px;
 }
 
-input{
-    display: flex;
-    padding: 5px;
-    margin: 2px;
-    border-radius: 15px;
-    background-color: #202020;
-    color: white;
-}
-
 .inputNome {
-    width: 20vw;
+    width: 25vw;
 }
 
 .inputPreco {
-    width: 20vw;
+    width: 25vw;
 }

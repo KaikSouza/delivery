@@ -58,7 +58,6 @@ body{
 
 .formulario-cliente{
     justify-content: center;
-    display: flex;
     padding: 15px;
 }
 
@@ -128,7 +127,7 @@ i{
     transform: scale(1.02);
 }
 
-.formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logadouro{
+.formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logradouro{
     width: 26vw;
 }
 

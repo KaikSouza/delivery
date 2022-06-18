@@ -23,5 +23,7 @@ $(document).ready(function(){
             $('#tabela-produto').DataTable().ajax.reload()
             }
         })
+        inputNome.value = ''
+        inputPreco.value = ''
     })
 })

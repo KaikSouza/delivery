@@ -15,7 +15,7 @@ if(empty($requestData['nome'] && $requestData['preco'])){
     );
 } else {
     //Caso os campos obrigatórios venham preenchidos, iremos realizar o cadastro
-    $ID = isset($requestData['ID']) ? $requestData['ID'] : '';
+    $ID = isset($requestData['id']) ? $requestData['id'] : '';
     $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
 
     //Verificação para cadastro ou atualização de registro
@@ -40,7 +40,7 @@ if(empty($requestData['nome'] && $requestData['preco'])){
     } else{
         //Se a nossa operação vier vazia, iremos realizar um update
         try{
-            $stmt = $pdo->prepare('UPDATE produto SET nome = :a, preco = :b WHERE ID = :id');
+            $stmt = $pdo->prepare('UPDATE produto SET nome = :a, preco = :b WHERE idproduto = :id');
             $stmt->execute(array(
                 ':id' => $ID,
                 ':a' => utf8_decode($requestData['nome']),

@@ -20,6 +20,7 @@ $(document).ready(function(){
                 text: dados.mensagem,
                 confirmButtonText: 'OK'
             })
+            $('#tabela-produto').DataTable().ajax.reload()
             }
         })
     })

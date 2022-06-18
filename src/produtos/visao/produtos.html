@@ -20,14 +20,18 @@
 
             <div class="produto">
                 <h2>Produtos Cadastrados</h2>
-                    <table class="table" id="tabela-produto">
-                        <tr>
-                            <th>NOME</th>
-                            <th>PREÇO</th>
-                            <th>CATEGORIA</th>
-                            <th>AÇÕES</th>
-                        </tr>
+                <div class="table-responsive">
+                    <table class="table table-hover" id="tabela-produto">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col" class="text-center">ID</th>
+                                <th scope="col" class="text-center">NOME</th>
+                                <th scope="col" class="text-center">PREÇO</th>
+                                <th scope="col" class="text-center">AÇÕES</th>
+                            </tr>
+                        </thead>
                     </table>
+                </div>
             </div>
 
 <div id="modal-produtos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">

@@ -39,19 +39,15 @@ body{
     margin: 0 auto;
     position: absolute;
 }
-
-.table {
-    justify-content: center;
-    display: flex;
-    margin-top: 2rem;
+.thead{
+    background-color: #B21E35;
 }
-
-.table th{
-    width: 15vw;
+.table{
+    border-radius: 10px;
 }
 
 .table td{
-    background-color: rgb(36, 36, 36);
+    background-color: #303030;
     padding: 8px;
 }
 

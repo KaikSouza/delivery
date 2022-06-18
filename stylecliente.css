@@ -127,17 +127,17 @@ i{
 }
 
 .formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logadouro{
-    width: 30vw;
+    width: 29vw;
 }
 
 .formulario-cliente .cep, .formulario-cliente .cidade{
-    width: 15vw;
+    width: 14vw;
 }
 
 .formulario-cliente .bairro{
-    width: 17vw;
+    width: 16vw;
 }
 
 .formulario-cliente .numero{
-    width: 12vw;
+    width: 11vw;
 }

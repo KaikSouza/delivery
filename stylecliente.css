@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 body{
+    color: #fff;
     background-color: #272727;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -9,6 +10,7 @@ body{
 }
 
 .cadastrar-cliente{
+    justify-content: center;
     margin-top: 6rem;
 }
 .cliente{
@@ -55,9 +57,9 @@ body{
 }
 
 .formulario-cliente{
+    justify-content: center;
     display: flex;
-    padding: 20px;
-    margin: 10px;
+    padding: 15px;
 }
 
 .botao{
@@ -114,7 +116,7 @@ i{
     border-radius: 15px;
     background-color: #202020;
     color: white;
-    box-shadow: 5px 5px 5px #0000006b;
+    box-shadow: 3px 3px 5px #0000006b;
     outline: none;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -123,15 +125,15 @@ i{
 }
 
 .formulario-cliente input:hover{
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logadouro{
-    width: 29vw;
+    width: 26vw;
 }
 
 .formulario-cliente .cep, .formulario-cliente .cidade{
-    width: 14vw;
+    width: 12vw;
 }
 
 .formulario-cliente .bairro{

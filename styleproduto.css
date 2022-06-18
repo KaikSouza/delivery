@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    background-color: #272727;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.cadastrar-produto{
+    margin-top: 6rem;
+}
+
+.cadastrar-produto h2::after{
+    content: '';
+    display: block;
+    width: 17.2rem;
+    height: 0.1rem;
+    background-color: #B21E35;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.produto {
+    margin-top: 5rem;
+    padding: 20px;
+    background-color: #202020;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px #0000006b;
+
+}
+
+.produto h2::after{
+    content: '';
+    display: block;
+    width: 20.8rem;
+    height: 0.1rem;
+    background-color: #B21E35;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.tabela-produto {
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.tabela-produto th{
+    width: 15vw;
+}
+
+.tabela-produto td{
+    background-color: rgb(36, 36, 36);
+    padding: 8px;
+}
+
+.formulario-produto{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 10px;
+}
+
+.botao{
+    display: flex;
+    justify-content: right;
+    margin-top: 0;
+    margin-right: 10rem;
+}
+
+.excluir-produto {
+    color: #fff;
+    background-color: #c40824;
+    border-radius: 5px;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+.editar-produto {
+    color: #fff;
+    background-color: #0167ff;
+    border-radius: 5px;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+.novo-produto{
+    border-radius: 15px;
+    padding: 6px;
+    border: none;
+    background-color: #00b615;
+    color: white;
+    width: 10vw;
+}
+
+i{
+    padding:2px;
+}
+
+input{
+    display: flex;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 15px;
+    background-color: #202020;
+    color: white;
+}
+
+.nome {
+    width: 20vw;
+}
+
+.preco {
+    width: 20vw;
+}
+
+.categoria {
+    width: 20vw;
+}

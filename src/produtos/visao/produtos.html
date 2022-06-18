@@ -1,56 +1,43 @@
-<div class="row mt-5">
-    <div class="col-12 mt-5">
-        <div class="card shadow mt-5">
-            <div class="card-header">
-                    <div class="card-title">
-                        <div class="row mb-4">
-                            <div class="col-12 col-md-9">
-                                <h4 class="text-dark">Produtos</h4>
-                            </div>
-                            <div class="col-12 col-md-2">
-                                <button class="btn btn-success btn-block btn-novo">NOVO PRODUTO</button>
-                            </div>
-                        </div>
-                    </div>
-              <div class="card-deck">
-                  <div class="card card-produtos">
-                      <div class="header header-produtos"><h5>Caderno</h5></div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                          <li class="list-group-item">ID: 1</li>
-                          <li class="list-group-item">PREÇO: R$25.00</li>
-                          <li class="list-group-item">CATEGORIA: Papelaria</li>
-                      </ul>
-                    </div>
-                    <div class="footer-dark footer-produtos"></div>
-                  </div>
-                  <div class="card card-produtos">
-                      <div class="header header-produtos"><h5>Caixa de som</h5></div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                          <li class="list-group-item">ID: 2</li>
-                          <li class="list-group-item">PREÇO: R$35.00</li>
-                          <li class="list-group-item">CATEGORIA: Eletrônico</li>
-                      </ul>
-                    </div>
-                    <div class="footer-dark footer-produtos"></div>
-                  </div>
-                  <div class="card card-produtos">
-                      <div class="header header-produtos"><h5>Escudo de plástico</h5></div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                          <li class="list-group-item">ID: 3</li>
-                          <li class="list-group-item">PREÇO: R$15.00</li>
-                          <li class="list-group-item">CATEGORIA: Brinquedo</li>
-                      </ul>
-                    </div>
-                    <div class="footer-dark footer-produtos"></div>
-                  </div>
-                </div>
-            </div>
-        </div>
+<div class = "cadastrar-produto">
+    <h2>Cadastrar Produto</h2>
+    <div class = "formulario-produto">
+        <form>
+            <label for="nome">
+                <span><i class="fa-solid fa-tag"></i> Nome</span>
+                <input type="text" class="nome" id="nome">
+            </label>
+            <label for="preco">
+                <span><i class="fa-solid fa-coins"></i> Preço</span>
+                <input type="text" class="preco" id="preco">
+            </label>
+            <label for="categoria">
+                <span><i class="fa-solid fa-rectangle-list"></i> Categoria</span>
+                <input type="text" class="categoria" id="categoria">
+            </label>
+        </form>
+    </div>
+    <div class="botao">
+        <button class="novo-produto">Cadastrar</button>
     </div>
 </div>
+
+            <div class="produto">
+                <h2>Produtos Cadastrados</h2>
+                    <table class="tabela-produto">
+                        <tr>
+                            <th>NOME</th>
+                            <th>PREÇO</th>
+                            <th>CATEGORIA</th>
+                            <th>AÇÕES</th>
+                        </tr>
+                        <tr>
+                            <td>Boné</td>
+                            <td>R$25,00</td>
+                            <td>Roupas</td>
+                            <td><button class="editar-produto"><i class="fa-solid fa-pen"></i></button> <button class="excluir-produto"><i class="fa-solid fa-trash-can"></i></button></td>
+                        </tr>
+                    </table>
+            </div>
 
 <div id="modal-produtos" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -71,4 +58,6 @@
     </div>
 </div>
 
-<script src="src/produtos/controle/produto-novo.js"></script>
+<script src="src/produtos/controle/produto-salvar.js"></script>
+<script src="src/produtos/controle/produto-editar.js"></script>
+<script src="src/produtos/controle/produto-excluir.js"></script>

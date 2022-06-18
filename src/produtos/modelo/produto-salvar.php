@@ -7,7 +7,7 @@ include('../../conexao/conexao.php');
 $requestData = $_REQUEST;
 
 //Verificação  de campos obrigatórios do formulário
-if(empty($requestData['NOME'])){
+if(empty($requestData['nome'] && $requestData['preco'])){
     //Caso a varável venha vazia do formulário, retornar um erro
     $dados = array(
         "tipo" => 'error',
@@ -16,15 +16,16 @@ if(empty($requestData['NOME'])){
 } else {
     //Caso os campos obrigatórios venham preenchidos, iremos realizar o cadastro
     $ID = isset($requestData['ID']) ? $requestData['ID'] : '';
-    $operacao = isset($requestdata['operacao']) ? $requestData['operacao'] : '';
+    $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
 
     //Verificação para cadastro ou atualização de registro
     if($operacao == 'insert'){
         //Comandos para o INSERT no banco de dados ocorram
         try{
-            $stmt = $pdo->prepare('INSERT INTO TIPO (NOME) VALUES (:a)');
+            $stmt = $pdo->prepare('INSERT INTO produto (nome,preco) VALUES (:a,:b)');
             $stmt->execute(array(
-                ':a' => utf8_decode($requestData['NOME'])
+                ':a' => utf8_decode($requestData['nome']),
+                ':b' => utf8_decode($requestData['preco'])
             ));
             $dados = array(
                 "tipo" => 'success',
@@ -39,10 +40,11 @@ if(empty($requestData['NOME'])){
     } else{
         //Se a nossa operação vier vazia, iremos realizar um update
         try{
-            $stmt = $pdo->prepare('UPDATE TIPO SET NOME = :a WHERE ID = :id');
+            $stmt = $pdo->prepare('UPDATE produto SET nome = :a, preco = :b WHERE ID = :id');
             $stmt->execute(array(
                 ':id' => $ID,
-                ':a' => utf8_decode($requestData['NOME'])
+                ':a' => utf8_decode($requestData['nome']),
+                ':b' => utf8_decode($requestData['preco'])
             ));
             $dados = array(
                 "tipo" => 'success',

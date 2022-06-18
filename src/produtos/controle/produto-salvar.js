@@ -1,13 +1,27 @@
 $(document).ready(function(){
    
-    $('.novo-produto').click(function(e){
-        e.preventDefault()
+        $('.novo-produto').click(function(e){
+            e.preventDefault()
 
-        Swal.fire({
-            icon: 'success',
-            title: 'Produto salvo com sucesso!',
-            showConfirmButton: false,
-            timer: 1500
-          })
+            let dados = $('#form-produto').serialize()
+
+            dados += `&operacao=${$('.novo-produto').attr('data-operation')}`
+
+            $.ajax({
+                type: 'POST',
+                dataType: 'JSON',
+                assync: true,
+                data: dados,
+                url: 'src/produto/modelo/produto-salvar.php',
+                success: function(dados) {
+
+            Swal.fire({
+                icon: dados.tipo,
+                text: dados.mensagem,
+                showConfirmButton: false,
+                timer: 1500
+            })
+            }
+        })
     })
 })

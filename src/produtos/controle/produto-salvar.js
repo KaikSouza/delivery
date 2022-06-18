@@ -18,8 +18,7 @@ $(document).ready(function(){
             Swal.fire({
                 icon: dados.tipo,
                 text: dados.mensagem,
-                showConfirmButton: false,
-                timer: 1500
+                confirmButtonText: 'OK'
             })
             }
         })

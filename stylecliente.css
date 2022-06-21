@@ -5,8 +5,6 @@ body{
     background-color: #272727;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    letter-spacing: 2px;
 }
 
 .cadastrar-cliente{
@@ -59,13 +57,7 @@ body{
 .formulario-cliente{
     justify-content: center;
     padding: 15px;
-}
-
-.botao{
-    display: flex;
-    justify-content: right;
-    margin-top: 0;
-    margin-right: 5rem;
+    border: 1px solid
 }
 
 .novo-cliente{
@@ -128,17 +120,17 @@ i{
 }
 
 .formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logradouro{
-    width: 26vw;
+    width: 500px;
 }
 
 .formulario-cliente .cep, .formulario-cliente .cidade{
-    width: 12vw;
+    width: 250px;
 }
 
 .formulario-cliente .bairro{
-    width: 16vw;
+    width: 200px;
 }
 
 .formulario-cliente .numero{
-    width: 11vw;
+    width: 280px;
 }

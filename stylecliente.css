@@ -8,7 +8,6 @@ body{
 }
 
 .cadastrar-cliente{
-    justify-content: center;
     margin-top: 6rem;
 }
 .cliente{
@@ -34,20 +33,14 @@ body{
     padding: 8px;
 }
 
-
-.cadastrar-cliente h2::after{
-    content: '';
-    display: block;
-    width: 18.2rem;
-    height: 0.1rem;
-    background-color: #B21E35;
-    margin: 0 auto;
-    position: absolute;
+.cadastrar-cliente h2{
+    text-align: center;
 }
+
 .cliente h2::after{
     content: '';
     display: block;
-    width: 22.2rem;
+    width: 20rem;
     height: 0.1rem;
     background-color: #B21E35;
     margin: 0 auto;
@@ -55,8 +48,11 @@ body{
 }
 
 .formulario-cliente{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 15px;
-    border: 1px solid
 }
 
 .novo-cliente{
@@ -64,7 +60,21 @@ body{
     padding: 8px;
     border: none;
     color: white;
-    width: 10vw;
+    width: 14vw;
+    font-weight: 800;
+    font-size: 15px;
+    cursor:pointer;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+    margin: 0.4rem;
+}
+.visualizar-cliente{
+    margin: 0.4rem;
+    border-radius: 15px;
+    padding: 8px;
+    border: none;
+    color: white;
+    width: 14vw;
     font-weight: 800;
     font-size: 15px;
     cursor:pointer;
@@ -74,7 +84,9 @@ body{
 
 .novo-cliente:hover{
     transform: scale(1.05);
-
+}
+.visualizar-cliente:hover{
+    transform: scale(1.05);
 }
 .excluir-cliente{
     color: #fff;
@@ -97,9 +109,15 @@ i{
     padding:2px;
 }
 
-#form-group input{
+#form-group{
     display: flex;
-    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#form-group input{
+    width: 30vw;
     padding: 10px;
     background-color: #383838;
     color: white;
@@ -110,6 +128,7 @@ i{
     border: none;
     border-radius: 15px;
     transition: 0.5s ease;
+    margin-bottom: 0.6rem;
 }
 
 #form-group input:hover{

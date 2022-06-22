@@ -1,46 +1,60 @@
-<form id = "form-cliente">    
+  
     <div class = "cadastrar-cliente">
         <h2>Cadastrar Cliente</h2>
         <div class = "formulario-cliente">
-            <form id = "form-cliente">  
-                <label for="nome">
-                    <span><i class="fa-solid fa-user"></i> Nome</span>
+            <form>
+                <div id="form-group">
+                    <label for="nome">
+                        <span><i class="fa-solid fa-user"></i> Nome</span>
+                    </label>
                     <input type="text" class="nome" id="nome">
-                </label>
-                <label for="celular">
-                    <span><i class="fa-solid fa-phone"></i> Celular</span>
+                </div>
+                <div id="form-group">
+                    <label for="celular">
+                        <span><i class="fa-solid fa-phone"></i> Celular</span>
+                    </label>
                     <input type="tel" class="celular" id="celular">
-                </label>
-                <label for="email">
-                    <span><i class="fa-solid fa-at"></i> Email</span>
+                </div>
+                <div id="form-group">
+                    <label for="email">
+                        <span><i class="fa-solid fa-at"></i> Email</span>
+                    </label>
                     <input type="email" class="email" id="email">
-                </label>
-                <label for="logradouro">
-                    <span><i class="fa-solid fa-road"></i> Logradouro</span>
+                </div>
+                <div id="form-group">
+                    <label for="logradouro">
+                        <span><i class="fa-solid fa-road"></i> Logradouro</span>
+                    </label>
                     <input type="text" class="logradouro" id="logradouro">
-                </label>
+                </div>
+                <div id="form-group">
                 <label for="cep">
                     <span>CEP</span>
-                    <input type="text" class="cep" id="cep" maxlength="9">
                 </label>
+                <input type="text" class="cep" id="cep" maxlength="9">
+                </div>
+                <div id="form-group">
                 <label for="cidade">
                     <span><i class="fa-solid fa-city"></i> Cidade</span>
-                    <input type="text" class="cidade" id="cidade">
                 </label>
+                <input type="text" class="cidade" id="cidade">
+                </div>
+                <div id="form-group">
                 <label for="bairro">
                     <span><i class="fa-solid fa-archway"></i> Bairro</span>
-                    <input type="text" class="bairro" id="bairro">
                 </label>
+                <input type="text" class="bairro" id="bairro">
+                </div>
+                <div id="form-group">
                 <label for="numero">
                     <span>Nº</span>
-                    <input type="text" class="numero" id="numero">
                 </label>
+                <input type="text" class="numero" id="numero">
+                </div>
+                <input type="hidden" name="idcliente" id="idcliente">
+                <input type="hidden" name="idendereco" id="idendereco">
+                <button class="btn btn-success novo-cliente">Cadastrar</button>
             </form>
-        </div>
-        <input type="hidden" name="idcliente" id="idcliente">
-        <input type="hidden" name="idendereco" id="idendereco">
-        <div class="botao">
-            <button class="novo-cliente">Cadastrar</button>
         </div>
     </div>  
 

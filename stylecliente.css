@@ -55,7 +55,6 @@ body{
 }
 
 .formulario-cliente{
-    justify-content: center;
     padding: 15px;
     border: 1px solid
 }
@@ -64,7 +63,6 @@ body{
     border-radius: 15px;
     padding: 8px;
     border: none;
-    background-color: #00b615;
     color: white;
     width: 10vw;
     font-weight: 800;
@@ -99,38 +97,23 @@ i{
     padding:2px;
 }
 
-
-.formulario-cliente input{
+#form-group input{
     display: flex;
+    width: 50%;
     padding: 10px;
-    margin: 2px;
-    border-radius: 15px;
-    background-color: #202020;
+    background-color: #383838;
     color: white;
-    box-shadow: 3px 3px 5px #0000006b;
+    box-shadow: 3px 3px 5px #2c2c2c;
     outline: none;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     border: none;
+    border-radius: 15px;
     transition: 0.5s ease;
 }
 
-.formulario-cliente input:hover{
+#form-group input:hover{
     transform: scale(1.02);
 }
 
-.formulario-cliente .nome, .formulario-cliente .celular, .formulario-cliente .email, .formulario-cliente .logradouro{
-    width: 500px;
-}
 
-.formulario-cliente .cep, .formulario-cliente .cidade{
-    width: 250px;
-}
-
-.formulario-cliente .bairro{
-    width: 200px;
-}
-
-.formulario-cliente .numero{
-    width: 280px;
-}

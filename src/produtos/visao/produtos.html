@@ -1,18 +1,34 @@
     <div class = "cadastrar-produto">
         <h2>Cadastrar Produto</h2>
-        <form id = "form-produto"></form>
+        <form>
             <div class = "formulario-produto">
+                <div class ="form-group">
                     <label for="nome">
                         <span><i class="fa-solid fa-tag"></i> Nome</span>
-                        <input type="text" name="nome" id="nome" class="inputNome">
                     </label>
+                    <input type="text" name="nome" id="nome" class="inputNome">
+                </div>
+                <div class="form-group">
                     <label for="preco">
                         <span><i class="fa-solid fa-coins"></i> Preço</span>
-                        <input type="text" name="preco" id="preco" clas="inputPreco">
                     </label>
-            </div>
+                    <input type="text" name="preco" id="preco" class="inputPreco">
+                </div>
+                <div class="form-group">
+                    <label for="preco">
+                        <span><i class="fa-solid fa-coins"></i> Categoria</span>
+                    </label>
+                    <select name ="categoria" id="categoria" class="selectCategoria">
+                        <option selected>Selecione...</option>
+                        <option>Brinquedo</option>
+                        <option>Cozinha</option>
+                        <option>Eletrônico</option>
+                        <option>Maquiagem</option>
+                        <option>Papelaria</option>
+                    </select>
+                </div>
         <input type="hidden" name="id" id="id">
-        <button class="novo-produto">Cadastrar</button>
+        <button class="btn btn-success novo-produto">Cadastrar</button>
     </form>
     </div>
 

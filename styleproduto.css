@@ -11,14 +11,11 @@ body{
     margin-top: 6rem;
 }
 
-.cadastrar-produto h2::after{
-    content: '';
-    display: block;
-    width: 17.2rem;
-    height: 0.1rem;
-    background-color: #B21E35;
-    margin: 0 auto;
-    position: absolute;
+.cadastrar-produto h2{
+    text-align: center;
+}
+.produto h2{
+    text-align: left;
 }
 
 .produto {
@@ -42,24 +39,41 @@ body{
 .formulario-produto{
     padding: 15px;
 }
+.formulario-produto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
 .thead{
+    border: none;
     background-color: #B21E35;
 }
 .table{
+    border: none;
     border-radius: 10px;
 }
 
 .table td{
+    border: none;
     background-color: #303030;
     padding: 8px;
 }
 
-.formulario-produto input{
+.form-group{
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.form-group input{
+    width: 30vw;
     padding: 10px;
     margin: 2px;
     border-radius: 15px;
-    background-color: #202020;
+    background-color: #383838;
     color: white;
     box-shadow: 3px 3px 5px #0000006b;
     outline: none;
@@ -68,26 +82,38 @@ body{
     border: none;
     transition: 0.5s ease;
 }
-.formulario-produto input:hover{
+.form-group input:hover{
     transform: scale(1.02);
+}
+
+.form-group select{
+    width: 30vw;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 15px;
+    background-color: #383838;
+    color: white;
+    box-shadow: 3px 3px 5px #0000006b;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
 }
 
 .novo-produto{
     border-radius: 15px;
-    padding: 6px;
+    padding: 8px;
     border: none;
     color: white;
-    width: 10vw;
+    width: 30vw;
+    font-weight: 800;
+    font-size: 15px;
+    cursor:pointer;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+    margin: 0.4rem;
 }
 
 i{
     padding:2px;
-}
-
-.inputNome {
-    width: 25vw;
-}
-
-.inputPreco {
-    width: 25vw;
 }

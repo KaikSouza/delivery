@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    background-color: #272727;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 table{
     color: white;
     text-align: center;
@@ -18,62 +25,49 @@ i{
     font-size: 20px;
 }
 
-.form-inline{
-    margin-right: 15px;
+.principal{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.form-control{
-    border-radius: 3px;
-}
-
-.card-produtos{
-    transition: 0.5s ease;
-    overflow: hidden;
-    transform: translate(0);
-}
-
-.card-produtos:hover{
-    transform: scale(1.09);
-}
-
-.modal-clientes{
+.informacao{
+    margin: 1rem;
+    display: flex;
+    width: auto;
+    box-shadow: 10px 10px 15px #0000006b;
     border-radius: 10px;
+    padding: 20px;
+    background-color: #202020;
 }
 
-.input-group{
-    transition: 0.5s ease;
+.card-cliente, .card-produto, .card-faturamento{
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #0000006b;
+    width: auto;
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
 }
 
-.input-group:hover{
-    transform: scale(1.05);
+.quantidade-cliente, .quantidade-produto{
+    margin: 0.7rem;
+    font-size: 60px;
+}
+.quantidade-faturamento{
+    color: #21A366;
+    margin: 0.7rem;
+    font-size: 40px;
+}
+.texto-cliente, .texto-produto{
+    font-size: 25px;
 }
 
-input:focus{
-    box-shadow: none;
-    border: #0069f1;
-}
-
-.header-produtos{
-    background-color: #B21E35;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    color: white;
-    text-align: center;
-}
-
-.footer-produtos{
-    background-color: #B21E35;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    height: 20px;
-}
-
-.card-body{
-    padding: 0;
-}
-
-.list-group-item{
-    color: white;
-    background-color: #323539;
-    padding: 10px;
-}

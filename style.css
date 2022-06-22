@@ -56,6 +56,10 @@ i{
     padding-left: 10px;
     padding-right: 10px;
     margin: 10px;
+    transition: 0.5s ease;
+}
+.card-cliente:hover, .card-produto:hover, .card-faturamento:hover{
+    transform: scale(1.05);
 }
 
 .quantidade-cliente, .quantidade-produto{

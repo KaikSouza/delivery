@@ -43,13 +43,13 @@ body{
 }
 #login, #senha{
     margin: 6px 0px;
-    background-color: #272727ad;
+    background-color: #383838;
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 15px;
     color: #fff;
-    box-shadow: 0px 1px 10px #313131;
+    box-shadow: 3px 3px 5px #0000006b;
     outline: none;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;

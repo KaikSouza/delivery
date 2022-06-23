@@ -7,6 +7,10 @@ body{
     color: white;
 }
 
+.cadastrar-produto{
+    margin-top: 5rem;
+}
+
 .cadastrar-produto h2{
     text-align: center;
 }
@@ -15,6 +19,7 @@ body{
 }
 
 .produto {
+    width: 60vw;
     margin-top: 5rem;
     padding: 20px;
     background-color: #202020;

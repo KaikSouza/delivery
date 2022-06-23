@@ -5,17 +5,6 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
-table{
-    color: white;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 4px;
-}
-table tr th{
-    background: #B21E35;
-    width: 100px;
-    height: 50px;
-}
 .navbar{
     background-color: #B21E35;
     color: white;
@@ -26,15 +15,15 @@ i{
 }
 
 .principal{
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .informacao{
-    margin: 1rem;
+    margin: 11rem;
     display: flex;
+    flex-direction: column;
     width: auto;
     box-shadow: 10px 10px 15px #0000006b;
     border-radius: 10px;
@@ -42,7 +31,7 @@ i{
     background-color: #202020;
 }
 
-.card-cliente, .card-produto, .card-faturamento{
+.card-cliente, .card-produto, .card-faturamento, .card-pedido{
     width: 100px;
     height: 100px;
     justify-content: center;
@@ -58,11 +47,11 @@ i{
     margin: 10px;
     transition: 0.5s ease;
 }
-.card-cliente:hover, .card-produto:hover, .card-faturamento:hover{
+.card-cliente:hover, .card-produto:hover, .card-faturamento:hover, .card-pedido:hover{
     transform: scale(1.05);
 }
 
-.quantidade-cliente, .quantidade-produto{
+.quantidade-cliente, .quantidade-produto, .quantidade-pedido{
     margin: 0.7rem;
     font-size: 60px;
 }
@@ -71,7 +60,7 @@ i{
     margin: 0.7rem;
     font-size: 40px;
 }
-.texto-cliente, .texto-produto{
+.texto-cliente, .texto-produto, .texto-pedido{
     font-size: 25px;
 }
 

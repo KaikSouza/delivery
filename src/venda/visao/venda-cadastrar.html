@@ -1,0 +1,31 @@
+<div class = "cadastrar-pedido">
+    <h2>Cadastrar Cliente</h2>
+    <div class = "formulario-pedido">
+        <form>
+            <div class="form-group">
+                <label for="nome">
+                    <span><i class="fa-solid fa-user"></i> Cliente</span>
+                </label>
+                <input type="text" class="nomeCliente" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="celular">
+                    <span><i class="fa-solid fa-phone"></i> Celular</span>
+                </label>
+                <input type="tel" class="celular" id="celular">
+            </div>
+            <div class="form-group">
+                <label for="produtos"><i class="fa-solid fa-list"></i> Produtos</label>
+                <select multiple class="form-control" id="produtos">
+                  <option>Boné - R$25.00</option>
+                  <option>Caneta - R$1.00</option>
+                  <option>Lápis - R$1.50</option>
+                  <option>Caderno - R$20.00</option>
+                  <option>Caixa de Som - R$35.00</option>
+                </select>
+              </div>
+            <input type="hidden" name="idcliente" id="idcliente">
+            <button class="btn btn-success novo-pedido">Realizar pedido</button><button class="btn btn-primary visualizar-cliente">Visualizar</button>
+        </form>
+    </div>
+</div>

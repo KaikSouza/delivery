@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    color: #fff;
+    background-color: #272727;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.cadastrar-pedido{
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.vendas{
+    margin-top: 5rem;
+    width: 60vw;
+    box-shadow: 10px 10px 15px #0000006b;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #202020;
+}
+.thead{
+    border: none;
+    background-color: #B21E35;
+}
+.table{
+    border: none;
+    border-radius: 10px;
+}
+
+.table td{
+    border: none;
+    background-color: #303030;
+    padding: 8px;
+}
+
+.vendas h2::after{
+    content: '';
+    display: block;
+    width: 16.9rem;
+    height: 0.1rem;
+    background-color: #B21E35;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.excluir-cliente{
+    color: #fff;
+    background-color: #c40824;
+    border-radius: 5px;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+.editar-cliente{
+    color: #fff;
+    background-color: #0167ff;
+    border-radius: 5px;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+.novo-pedido{
+    margin: 0.4rem;
+    border-radius: 15px;
+    padding: 8px;
+    border: none;
+    color: white;
+    width: 14vw;
+    font-weight: 800;
+    font-size: 15px;
+    cursor:pointer;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+}
+.novo-pedido:hover{
+    transform: scale(1.05);
+}
+
+i{
+    padding:2px;
+}

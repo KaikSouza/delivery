@@ -1,3 +1,28 @@
+<div class = "cadastrar-pedido">
+    <h2>Realizar Pedido</h2>
+    <div class = "formulario-pedido">
+        <form>
+            <div class="form-group">
+                <label for="nome">
+                    <span><i class="fa-solid fa-user"></i> Cliente</span>
+                </label>
+                <input type="text" class="nomeCliente" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="celular">
+                    <span><i class="fa-solid fa-phone"></i> Celular</span>
+                </label>
+                <input type="tel" class="celular" id="celular">
+            </div>
+            <div class="form-group">
+                <label for="produtos"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar produto</label>
+                <input type="search" class="pesquisar" id="pesquisar">
+              </div>
+            <input type="hidden" name="idcliente" id="idcliente">
+            <button class="btn btn-success novo-pedido">Realizar pedido</button><button class="btn btn-primary visualizar-cliente">Visualizar</button>
+        </form>
+    </div>
+</div>
 <div class="vendas">
     <h2>Vendas realizadas</h2>
     <div class="table-responsive">
@@ -8,16 +33,18 @@
                     <th scope="col" class="text-center">PRODUTO</th>
                     <th scope="col" class="text-center">TOTAL</th>
                     <th scope="col" class="text-center">CLIENTE</th>
-                    <th scope="col" class="text-center">AÇÕES</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Boné</td>
-                    <td>R$25.00</td>
-                    <td>Ana Roberta</td>
-                    <td><button class="btn btn-danger cliente-view"><i class="fa-solid fa-x"></i></button></td>
+                    <th scope="col" class="text-center">CANCELAR</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td><h4>1</h4></td>
+                    <td><h4>Boné</h4></td>
+                    <td><h4>R$25.00</h4></td>
+                    <td><h4>Ana Roberta</h4></td>
+                    <td><button class="btn btn-danger cliente-view"><i class="fa-solid fa-x"></i></button></td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>

@@ -91,7 +91,6 @@ body{
     width: 30vw;
     padding: 10px;
     margin: 2px;
-    border-radius: 15px;
     background-color: #383838;
     color: white;
     box-shadow: 3px 3px 5px #0000006b;
@@ -117,4 +116,11 @@ body{
 
 i{
     padding:2px;
+}
+
+.produto-editar{
+    color: #fff;
+    background-color: #0167ff;
+    border-radius: 5px;
+    border: none;
 }

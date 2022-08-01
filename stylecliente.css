@@ -7,7 +7,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.cadastrar-cliente{
+.cadastrar-cliente, .cadastrar-funcionario{
     text-align: center;
     margin-top: 5rem;
 }
@@ -54,21 +54,19 @@ body{
     padding: 15px;
 }
 
-.novo-cliente{
+.novo-cliente, .novo-funcionario{
     border-radius: 15px;
     padding: 8px;
     border: none;
     color: white;
     width: 14vw;
-    font-weight: 800;
     font-size: 15px;
     cursor:pointer;
-    letter-spacing: 2px;
-    transition: 0.5s ease;
+    transition: 0.4s ease;
     margin: 0.4rem;
 }
 
-.novo-cliente:hover{
+.novo-cliente:hover, .novo-funcionario:hover{
     transform: scale(1.05);
 }
 .cliente-excluir{

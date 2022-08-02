@@ -7,53 +7,67 @@ include('../../conexao/conexao.php');
 $requestData = $_REQUEST;
 
 //Verificação  de campos obrigatórios do formulário
-if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'] && $requestData['logadouro'] && $requestData['cep'] && $requestData['cidade'] && $requestData['bairro'] && $requestData['numero'])){
-    //Caso a varável venha vazia do formulário, retornar um erro
+if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'] && $requestData['cep'] && $requestData['uf'] && $requestData['cidade'] && $requestData['logradouro'] && $requestData['bairro'] && $requestData['numero'])){
+    //Caso a variável venha vazia do formulário, retornar um erro
     $dados = array(
         "tipo" => 'error',
         "mensagem" => 'Existe(m) campo(s) obrigatório(s) não preenchido(s)!'
     );
 } else {
     //Caso os campos obrigatórios venham preenchidos, iremos realizar o cadastro
-    $id = isset($requestData['id']) ? $requestData['id'] : '';
+    $id = isset($requestData['idcliente']) ? $requestData['idcliente'] : '';
     $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
 
     //Verificação para cadastro ou atualização de registro
     if($operacao == 'insert'){
         //Comandos para o INSERT no banco de dados ocorram
         try{
-            $stmt = $pdo->prepare('INSERT INTO cliente (nome,preco) VALUES (:a,:b)');
+            $stmt = $pdo->prepare('INSERT INTO cliente (nome, celular, email, cep, uf, cidade, logradouro, bairro, numero) VALUES (:a, :b, :c, :d, :e, :f, :g, :h, :i)');
             $stmt->execute(array(
                 ':a' => utf8_decode($requestData['nome']),
-                ':b' => utf8_decode($requestData['preco'])
+                ':b' => $requestData['celular'],
+                ':c' => $requestData['email'],
+                ':d' => $requestData['cep'],
+                ':e' => $requestData['uf'],
+                ':f' => utf8_decode($requestData['cidade']),
+                ':g' => utf8_decode($requestData['logradouro']),
+                ':h' => utf8_decode($requestData['bairro']),
+                ':i' => $requestData['numero']
             ));
             $dados = array(
                 "tipo" => 'success',
-                "mensagem" => 'Registro salvo com sucesso!'
+                "mensagem" => 'Cliente cadastrado com sucesso!'
             );
          } catch(PDOException $e){
             $dados = array(
                 "tipo" => 'error',
-                "mensagem" => 'Não foi possível salvar o registro: '.$e
+                "mensagem" => 'Não foi possível cadastrar o cliente. Erro:'.$e
             );
          }
     } else{
         //Se a nossa operação vier vazia, iremos realizar um update
         try{
-            $stmt = $pdo->prepare('UPDATE produto SET nome = :a, preco = :b WHERE idproduto = :id');
+            $stmt = $pdo->prepare('UPDATE cliente SET nome = :a, celular = :b, email = :c, cep = :d, uf = :e, cidade = :f, logradouro = :g, bairro = :h, numero = :i WHERE idcliente = :idcliente');
             $stmt->execute(array(
-                ':id' => $id,
+                ':idcliente' => $id,
                 ':a' => utf8_decode($requestData['nome']),
-                ':b' => utf8_decode($requestData['preco'])
+                ':b' => $requestData['celular'],
+                ':c' => $requestData['email'],
+                ':d' => $requestData['cep'],
+                ':e' => $requestData['uf'],
+                ':f' => utf8_decode($requestData['cidade']),
+                ':g' => utf8_decode($requestData['logradouro']),
+                ':h' => utf8_decode($requestData['bairro']),
+                ':i' => $requestData['numero']
             ));
             $dados = array(
                 "tipo" => 'success',
-                "mensagem" => 'Atualizado com sucesso!'
+                "mensagem" => 'Cadastro atualizado com sucesso!'
             );
          } catch(PDOException $e){
             $dados = array(
                 "tipo" => 'error',
-                "mensagem" => 'Não foi possível atualizar o registro: '.$e
+                "mensagem" => 'Não foi possível atualizar o cadastro do cliente. Erro:'.$e
             );
          }
     }

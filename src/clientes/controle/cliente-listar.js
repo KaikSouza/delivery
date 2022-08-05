@@ -4,10 +4,6 @@ $(document).ready(function(){
         scrollY: '40vh',
         scrollCollapse: true,
         paging: false,
-        responsive: true,
-        buttons: [
-            'pdf'
-        ],
         "language":{
             "url": "libs/DataTables/pt_br.json"
         },

@@ -32,7 +32,6 @@ body{
 .table td{
     text-align: center;
     border: none;
-    background-color: #303030;
     padding: 8px;
 }
 
@@ -71,13 +70,17 @@ body{
 }
 .cliente-excluir{
     color: #fff;
-    background-color: #c40824;
-    border-radius: 5px;
+    border-radius: 100px;
     border: none;
 }
 .cliente-editar{
     color: #fff;
     background-color: #0167ff;
+    border-radius: 100px;
+    border: none;
+}
+.cliente-pedido-novo{
+    color: #fff;
     border-radius: 100px;
     border: none;
 }

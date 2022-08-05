@@ -1,31 +1,25 @@
 <div class="cliente">
     <h2>Clientes cadastrados</h2>
     <div class="table-responsive">
-        <table class="table table-hover" id="tabela-cliente">
+        <table class="table table-dark table-hover table-striped" id="tabela-cliente">
             <thead class="thead">
                 <tr>
                     <th scope="col" class="text-center">ID</th>
                     <th scope="col" class="text-center">NOME</th>
                     <th scope="col" class="text-center">CELULAR</th>
+                    <th scope="col" class="text-center">EMAIL</th>
                     <th scope="col" class="text-center">NOVO PEDIDO</th>
                     <th scope="col" class="text-center">EDITAR</th>
                     <th scope="col" class="text-center">EXCLUIR</th>
                 </tr>
-                <tr>
-                    <td><h4>1</h4></td>
-                    <td><h4>Ana Roberta<h4></td>
-                    <td><h4>14998657893</h4></td>
-                    <td>
-                        <button class="btn btn-success cliente-pedido-novo"><i class="fa-solid fa-plus"></i></button>
-                    </td>
-                    <td>
-                        <button class="btn cliente-editar"><i class="fa-solid fa-pen"></i></button>
-                    </td>
-                    <td>
-                        <button class="btn btn-danger cliente-excluir"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                </tr>
             </thead>
+            <tbody>
+
+            </tbody>
         </table>
     </div>
 </div>
+
+<script src="src/clientes/controle/cliente-listar.js"></script>
+<script src="libs/DataTables/Buttons/js/buttons.dataTables.min.js"></script>
+<script src="libs/DataTables/Responsive/js/responsive.dataTables.min.js"></script>

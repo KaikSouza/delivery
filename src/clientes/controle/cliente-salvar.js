@@ -14,11 +14,22 @@ $(document).ready(function(){
             data: dados,
             url: 'src/clientes/modelo/cliente-salvar.php',
             success: function(dados) {
-                Swal.fire({
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 4000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
                     icon: dados.tipo,
-                    title: dados.mensagem,
-                    showConfirmButton: true
-                })
+                    title: dados.mensagem
+                  })
             }
         })
     })

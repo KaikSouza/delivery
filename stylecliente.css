@@ -38,11 +38,15 @@ body{
 .cliente h2::after{
     content: '';
     display: block;
-    width: 22vw;
+    width: 29vw;
     height: 0.1rem;
     background-color: #B21E35;
     margin: 0 auto;
     position: absolute;
+}
+
+.cliente h2{
+    font-size: 3vw;
 }
 
 .formulario-cliente{
@@ -113,10 +117,4 @@ i{
 
 .form-group input:hover{
     transform: scale(1.02);
-}
-
-@media only screen and (max-width: 582px) {
-    .cliente h2{
-        font-size: 20px;
-    }
 }

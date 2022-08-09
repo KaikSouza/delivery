@@ -1,64 +1,30 @@
-    <div class = "cadastrar-produto">
-        <h2>Cadastrar Produto</h2>
-        <form>
-            <div class = "formulario-produto">
-                <div class ="form-group">
-                    <label for="nome">
-                        <span><i class="fa-solid fa-tag"></i> Nome</span>
-                    </label>
-                    <input type="text" name="nome" id="nome" class="inputNome">
-                </div>
-                <div class="form-group">
-                    <label for="preco">
-                        <span><i class="fa-solid fa-dollar"></i> Preço</span>
-                    </label>
-                    <input type="text" name="preco" id="preco" class="inputPreco">
-                </div>
-                <div class="form-group">
-                    <label for="preco">
-                        <span><i class="fa-solid fa-list-ul"></i> Categoria</span>
-                    </label>
-                    <select name ="categoria" id="categoria" class="selectCategoria">
-                        <option selected>Selecione...</option>
-                        <option>Brinquedo</option>
-                        <option>Cozinha</option>
-                        <option>Eletrônico</option>
-                        <option>Maquiagem</option>
-                        <option>Papelaria</option>
-                    </select>
-                </div>
-        <input type="hidden" name="id" id="id">
-        <button class="btn btn-success novo-produto">Cadastrar</button>
-    </form>
+<div class="produto">
+    <h2>Produtos Cadastrados</h2>
+    <div class="table-responsive">
+        <table class="table table-hover" id="tabela-produto">
+            <thead class="thead">
+                <tr>
+                    <th scope="col" class="text-center">ID</th>
+                    <th scope="col" class="text-center">NOME</th>
+                    <th scope="col" class="text-center">PREÇO</th>
+                    <th scope="col" class="text-center">EDITAR</th>
+                    <th scope="col" class="text-center">EXCLUIR</th>
+                </tr>
+                <tr>
+                    <td><h4>1</h4></td>
+                    <td><h4>Boné</h4></td>
+                    <td><h4>R$25.00</h4></td>
+                    <td>
+                        <button class="btn produto-editar"><i class="fa-solid fa-pen"></i></button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger produto-excluir"><i class="fa-solid fa-trash"></i></button>
+                    </td> 
+                </tr>
+            </thead>
+        </table>
     </div>
-
-            <div class="produto">
-                <h2>Produtos Cadastrados</h2>
-                <div class="table-responsive">
-                    <table class="table table-hover" id="tabela-produto">
-                        <thead class="thead">
-                            <tr>
-                                <th scope="col" class="text-center">ID</th>
-                                <th scope="col" class="text-center">NOME</th>
-                                <th scope="col" class="text-center">PREÇO</th>
-                                <th scope="col" class="text-center">EDITAR</th>
-                                <th scope="col" class="text-center">EXCLUIR</th>
-                            </tr>
-                            <tr>
-                                <td><h4>1</h4></td>
-                                <td><h4>Boné</h4></td>
-                                <td><h4>R$25.00</h4></td>
-                                <td>
-                                    <button class="btn produto-editar"><i class="fa-solid fa-pen"></i></button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-danger produto-excluir"><i class="fa-solid fa-trash"></i></button>
-                                </td> 
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div>
+</div>
 
 <script src="src/produtos/controle/produto-salvar.js"></script>
 <script src="src/produtos/controle/produto-editar.js"></script>

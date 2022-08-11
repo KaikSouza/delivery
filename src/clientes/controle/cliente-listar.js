@@ -35,27 +35,7 @@ $(document).ready(function(){
             "render": function(data, type, row, meta){
                 return `
                 <button id ="${data}" class = "btn btn-success cliente-pedido-novo"><i class="fa-solid fa-plus"></i></button>
-                `
-            }
-        },
-        {
-            "data": 'idcliente',
-            "className": 'text-center',
-            "orderable": false,
-            "searchable": false,
-            "render": function(data, type, row, meta){
-                return `
                 <button id ="${data}" class = "btn btn-info cliente-editar"><i class="fa-solid fa-pen"></i></button>
-                `
-            }
-        },
-        {
-            "data": 'idcliente',
-            "className": 'text-center',
-            "orderable": false,
-            "searchable": false,
-            "render": function(data, type, row, meta){
-                return `
                 <button id ="${data}" class = "btn btn-danger cliente-excluir"><i class="fa-solid fa-trash"></i></button>
                 `
             }

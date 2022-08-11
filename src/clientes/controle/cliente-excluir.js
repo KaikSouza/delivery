@@ -3,39 +3,27 @@ $(document).ready(function(){
   $('#tabela-cliente').on('click', 'button.cliente-excluir', function(e){
       e.preventDefault()
 
-      let ID = `idcliente=${$(this).attr('idcliente')}`
+      let ID = `idcliente=${$(this).attr('id')}`
 
       Swal.fire({
           title: 'Você tem certeza que deseja excluir o registro deste cliente?',
           icon: 'question',
           showCancelButton: true,
-          conffirmButtonText: 'Sim',
-          cancelButtonText: 'Não',
-          showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-          },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-          }
-      }).then(result => {
+          confirmButtonText: 'Sim',
+          cancelButtonText: 'Não'
+      }).then((result) => {
           if(result.value){
               $.ajax({
                   type: 'POST',
-                  dataType: 'json',
+                  dataType: 'JSON',
                   assync: true,
-                  data: dados,
+                  data: ID,
                   url: 'src/clientes/modelo/cliente-excluir.php',
                   success: function(dados){
                         Swal.fire({
                           title: dados.mensagem,
                           icon: dados.tipo,
-                          confirmButtonText: 'Ok',
-                          showClass: {
-                            popup: 'animate__animated animate__fadeInDown'
-                          },
-                          hideClass: {
-                            popup: 'animate__animated animate__fadeOutUp'
-                          }
+                          confirmButtonText: 'Ok'
                         })
                         $('#tabela-cliente').DataTable().ajax.reload()
                   }

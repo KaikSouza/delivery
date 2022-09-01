@@ -2,62 +2,72 @@
     <h2>Cadastrar Cliente</h2>
     <div class = "formulario-cliente">
         <form id="form-cliente">
-            <div class="form-group">
-                <label for="nome">
-                    <span><i class="fa-solid fa-user"></i> Nome</span>
-                </label>
-                <input type="text" class="nomeCliente" name="nome" id="nome">
-            </div>
-            <div class="form-group">
-                <label for="celular">
-                    <span><i class="fa-solid fa-phone"></i> Celular</span>
-                </label>
-                <input type="tel" class="celular" name="celular" id="celular">
-            </div>
-            <div class="form-group">
-                <label for="email">
-                    <span><i class="fa-solid fa-at"></i> Email</span>
-                </label>
-                <input type="email" class="email" name="email" id="email">
-            </div>
-            <div class="form-group">
-            <label for="cep">
-                <span>CEP</span>
-            </label>
-            <input type="text" class="cep" name="cep" id="cep" maxlength="9">
-            </div>
-            <div class="form-group">
-                <label for="uf">
-                    <span><i class="fa-solid fa-city"></i> UF</span>
-                </label>
-                <input type="text" class="uf" name="uf" id="uf">
+
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="nome">
+                        <span><i class="fa-solid fa-user"></i> Nome</span>
+                    </label>
+                    <input type="text" class="form-control nomeCliente" name="nome" id="nome">
                 </div>
-            <div class="form-group">
-            <label for="cidade">
-                <span><i class="fa-solid fa-city"></i> Cidade</span>
-            </label>
-            <input type="text" class="cidade" name="cidade" id="cidade">
+                <div class="form-group col-6">
+                    <label for="celular">
+                        <span><i class="fa-solid fa-phone"></i> Celular</span>
+                    </label>
+                    <input type="tel" class="form-control celular" name="celular" id="celular">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="logradouro">
-                    <span><i class="fa-solid fa-road"></i> Logradouro</span>
+
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="email">
+                        <span><i class="fa-solid fa-at"></i> Email</span>
+                    </label>
+                    <input type="email" class="form-control email" name="email" id="email">
+                </div>
+                <div class="form-group col-6">
+                    <label for="cep">
+                        <span>CEP</span>
+                    </label>
+                    <input type="text" class="form-control cep" name="cep" id="cep" maxlength="9">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="uf">
+                        <span><i class="fa-solid fa-city"></i> UF</span>
+                    </label>
+                    <input type="text" class="form-control uf" name="uf" id="uf">
+                </div>
+                <div class="form-group col-6">
+                <label for="cidade">
+                    <span><i class="fa-solid fa-city"></i> Cidade</span>
                 </label>
-                <input type="text" class="logradouro" name="logradouro" id="logradouro">
+                <input type="text" class="form-control cidade" name="cidade" id="cidade">
+                </div>
             </div>
-            <div class="form-group">
-            <label for="bairro">
-                <span><i class="fa-solid fa-archway"></i> Bairro</span>
-            </label>
-            <input type="text" class="bairro" name="bairro" id="bairro">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="bairro">
+                        <span><i class="fa-solid fa-archway"></i> Bairro</span>
+                    </label>
+                    <input type="text" class="form-control bairro" name="bairro" id="bairro">
+                </div>
+                <div class="form-group col-6">
+                    <label for="numero">
+                        <span>Nº</span>
+                    </label>
+                    <input type="text" class="form-control numero" name="numero" id="numero">
+                </div>
             </div>
-            <div class="form-group">
-            <label for="numero">
-                <span>Nº</span>
-            </label>
-            <input type="text" class="numero" name="numero" id="numero">
-            </div>
-            <input type="hidden" name="idcliente" id="idcliente">
-            <button class="btn btn-success novo-cliente">Cadastrar</button><button class="btn btn-primary visualizar-cliente">Visualizar</button>
+                <div class="form-group">
+                    <label for="logradouro">
+                        <span><i class="fa-solid fa-road"></i> Logradouro</span>
+                    </label>
+                    <input type="text" class="form-control logradouro" name="logradouro" id="logradouro">
+                </div>
+            <input type="hidden" name="ID" id="ID">
+            <button class="btn btn-success novo-cliente">Cadastrar</button>
         </form>
     </div>
 </div>

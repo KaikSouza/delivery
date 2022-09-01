@@ -68,7 +68,7 @@ body{
     justify-content: center;
 }
 
-.form-group input{
+.inputNomeProduto, .inputPreco{
     width: 30vw;
     padding: 10px;
     margin: 2px;

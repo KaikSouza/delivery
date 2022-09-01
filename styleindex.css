@@ -55,7 +55,7 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.btn{
+.btn-login{
     width: 100%;
     color: white;
     background: #B21E35;
@@ -69,7 +69,7 @@ body{
     letter-spacing: 2px;
 }
 
-.btn:hover{
+.btn-login:hover{
     background: #B21E35;
     border: #B21E35;
 }

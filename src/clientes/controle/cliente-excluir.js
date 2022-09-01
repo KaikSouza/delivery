@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  $('#tabela-cliente').on('click', 'button.cliente-excluir', function(e){
+  $('#tabela-cliente').on('click', 'button.btn-excluir', function(e){
       e.preventDefault()
 
       let ID = `idcliente=${$(this).attr('id')}`

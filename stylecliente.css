@@ -62,7 +62,7 @@ body{
     padding: 8px;
     border: none;
     color: white;
-    width: 14vw;
+    width: 35vw;
     font-size: 15px;
     cursor:pointer;
     transition: 0.4s ease;
@@ -72,19 +72,14 @@ body{
 .novo-cliente:hover, .novo-funcionario:hover{
     transform: scale(1.05);
 }
-.cliente-excluir{
+.btn-excluir{
     color: #fff;
     border-radius: 100px;
     border: none;
 }
-.cliente-editar{
+.btn-editar{
     color: #fff;
     background-color: #0167ff;
-    border-radius: 100px;
-    border: none;
-}
-.cliente-pedido-novo{
-    color: #fff;
     border-radius: 100px;
     border: none;
 }
@@ -101,7 +96,6 @@ i{
 }
 
 .form-group input{
-    width: 30vw;
     padding: 10px;
     background-color: #383838;
     color: white;

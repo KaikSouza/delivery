@@ -14,7 +14,7 @@ if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'
     );
 } else {
     //Caso os campos obrigatórios venham preenchidos, iremos realizar o cadastro
-    $id = isset($requestData['idcliente']) ? $requestData['idcliente'] : '';
+    $ID = isset($requestData['ID']) ? $requestData['ID'] : '';
     $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
 
     //Verificação para cadastro ou atualização de registro
@@ -46,9 +46,9 @@ if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'
     } else{
         //Se a nossa operação vier vazia, iremos realizar um update
         try{
-            $stmt = $pdo->prepare('UPDATE cliente SET nome = :a, celular = :b, email = :c, cep = :d, uf = :e, cidade = :f, logradouro = :g, bairro = :h, numero = :i WHERE idcliente = :idcliente');
+            $stmt = $pdo->prepare('UPDATE cliente SET nome = :a, celular = :b, email = :c, cep = :d, uf = :e, cidade = :f, logradouro = :g, bairro = :h, numero = :i WHERE idcliente = :id');
             $stmt->execute(array(
-                ':idcliente' => $id,
+                ':id' => $ID,
                 ':a' => utf8_decode($requestData['nome']),
                 ':b' => $requestData['celular'],
                 ':c' => $requestData['email'],

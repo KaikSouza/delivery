@@ -3,8 +3,12 @@ $(document).ready(function() {
         "processing": true,
         "serverSide": true,
         "ajax": {
-            "url": "src/cliente/modelo/cliente-listar.php",
+            "url": "src/clientes/modelo/cliente-listar.php",
             "type": "POST"
+        },
+        "language": {
+            "processing": "<div class='loader'></div>",
+            "url": "libs/DataTables/pt_br.json"
         },
         "columns": [{
                 "data": 'idcliente',

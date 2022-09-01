@@ -112,3 +112,7 @@ i{
 .form-group input:hover{
     transform: scale(1.02);
 }
+
+.dataTables_wrapper .dataTables_processing{
+    color: #202020;
+}

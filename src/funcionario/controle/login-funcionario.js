@@ -12,7 +12,7 @@ $(document).ready(function(){
             url: 'src/funcionario/modelo/login-funcionario.php',
             success: function(dados){
                 if(dados.tipo == 'success'){
-                    $(location).attr('href', 'controle.html')
+                    $(location).attr('href', 'home.html')
                 }else{
                     Swal.fire({
                       title: dados.mensagem,

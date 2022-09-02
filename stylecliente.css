@@ -75,8 +75,9 @@ body{
 
 .btn-editar, .btn-excluir, .btn-visualizar{
     color: #fff;
-    border-radius: 50%;
+    border-radius: 100%;
     border: none;
+    font-size: 15px;
 }
 
 i{
@@ -92,14 +93,12 @@ i{
 
 .form-group input{
     padding: 10px;
-    background-color: #383838;
-    color: white;
     box-shadow: 3px 3px 5px #0000006b;
     outline: none;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    border: none;
-    border-radius: 15px;
+    border: 2px solid #202020;
+    border-radius: 20px;
     transition: 0.5s ease;
     margin-bottom: 0.6rem;
 }
@@ -110,4 +109,5 @@ i{
 
 .dataTables_wrapper .dataTables_processing{
     color: #202020;
+    font-size: 20px;
 }

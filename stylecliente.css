@@ -72,15 +72,10 @@ body{
 .novo-cliente:hover, .novo-funcionario:hover{
     transform: scale(1.05);
 }
-.btn-excluir{
+
+.btn-editar, .btn-excluir, .btn-visualizar{
     color: #fff;
-    border-radius: 100px;
-    border: none;
-}
-.btn-editar{
-    color: #fff;
-    background-color: #0167ff;
-    border-radius: 100px;
+    border-radius: 50%;
     border: none;
 }
 

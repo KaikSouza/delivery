@@ -7,12 +7,12 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-.cadastrar-cliente, .cadastrar-funcionario{
+.cadastrar-cliente, .cadastrar-funcionario, .cadastrar-venda{
     text-align: center;
     margin-top: 5rem;
 }
 
-.cliente{
+.cliente, .produto{
     margin-top: 5rem;
     width: 60vw;
     box-shadow: 10px 10px 15px #0000006b;
@@ -57,20 +57,15 @@ body{
     padding: 15px;
 }
 
-.novo-cliente, .novo-funcionario{
-    border-radius: 15px;
+.novo-cliente, .novo-funcionario, .novo-produto, .novo-venda{
+    border-radius: 5px;
     padding: 8px;
     border: none;
     color: white;
-    width: 35vw;
+    width: 30vw;
     font-size: 15px;
     cursor:pointer;
-    transition: 0.4s ease;
     margin: 0.4rem;
-}
-
-.novo-cliente:hover, .novo-funcionario:hover{
-    transform: scale(1.05);
 }
 
 .btn-editar, .btn-excluir, .btn-visualizar{
@@ -97,17 +92,23 @@ i{
     outline: none;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    border: 2px solid #202020;
-    border-radius: 20px;
-    transition: 0.5s ease;
+    border-radius: 10px;
     margin-bottom: 0.6rem;
-}
-
-.form-group input:hover{
-    transform: scale(1.02);
 }
 
 .dataTables_wrapper .dataTables_processing{
     color: #202020;
     font-size: 20px;
+}
+
+.modal-title{
+    color: #000000;
+}
+
+#modal-cliente, #modal-categoria{
+    color: #000000;
+}
+
+.novo-categoria{
+    width: 7vw;
 }

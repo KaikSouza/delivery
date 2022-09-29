@@ -1,7 +1,5 @@
-<div class = "cadastrar-cliente">
-    <h2 class="text-cadastrar-cliente">Cadastrar Cliente</h2>
     <div class = "formulario-cliente">
-        <form id="form-cliente">
+        <form id="form-cliente-editar">
 
             <div class="form-row">
                 <div class="form-group col-6">
@@ -14,7 +12,7 @@
                     <label for="celular">
                         <span><i class="fa-solid fa-phone"></i> Celular</span>
                     </label>
-                    <input type="tel" class="form-control celular" name="celular" id="celular" maxlength="15">
+                    <input type="tel" class="form-control celular" name="celular" id="celular">
                 </div>
             </div>
 
@@ -67,11 +65,7 @@
                     <input type="text" class="form-control logradouro" name="logradouro" id="logradouro">
                 </div>
             <input type="hidden" name="idcliente" id="idcliente">
-            <button class="btn btn-success novo-cliente">Cadastrar</button>
         </form>
     </div>
-</div>
 
-<script src="src/clientes/controle/cliente-novo.js"></script>
-<script src="src/clientes/controle/cliente-salvar.js"></script>
 <script src="src/clientes/controle/cliente-mascara.js"></script>

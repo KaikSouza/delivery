@@ -5,11 +5,11 @@ $(document).ready(function(){
 
          $('#content').empty()
  
-         let ID = `ID=${$(this).attr('id')}`
+         let ID = `idcliente=${$(this).attr('id')}`
 
          $.ajax({
             type: 'POST',
-            dataType: 'JSON',
+            dataType: 'json',
             assync: true,
             data: ID,
             url: 'src/clientes/modelo/cliente-visualizar.php',

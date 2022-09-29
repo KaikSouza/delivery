@@ -1,16 +1,16 @@
 $(document).ready(function() {
-    $('#tabela-cliente').DataTable({
+    $('#tabela-produto').DataTable({
         "processing": true,
         "serverSide": true,
         "ajax": {
-            "url": "src/clientes/modelo/cliente-listar.php",
+            "url": "src/produtos/modelo/produto-listar.php",
             "type": "POST"
         },
         "language": {
             "url": "libs/DataTables/pt_br.json"
         },
         "columns": [{
-                "data": 'idcliente',
+                "data": 'idproduto',
                 "className": 'text-center'
             },
             {
@@ -18,15 +18,15 @@ $(document).ready(function() {
                 "className": 'text-center'
             },
             {
-                "data": 'celular',
+                "data": 'novo_preco',
                 "className": 'text-center'
             },
             {
-                "data": 'email',
+                "data": 'categoria',
                 "className": 'text-center'
             },
             {
-                "data": 'idcliente',
+                "data": 'idproduto',
                 "orderable": false,
                 "searchable": false,
                 "className": 'text-center',

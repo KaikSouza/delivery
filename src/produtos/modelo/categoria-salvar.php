@@ -4,7 +4,7 @@
 
     $requestData = $_REQUEST;
 
-    if(empty($requestData['login']) && empty($requestData['senha'])){
+    if(empty($requestData['categoria'])){
         $dados = array(
             "tipo" => 'error',
             "mensagem" => 'Existem campos obrigatórios não preenchidos!'
@@ -15,37 +15,35 @@
 
         if($operacao == 'insert'){
             try{
-                $stmt = $pdo->prepare("INSERT INTO funcionario (login, senha) VALUES (:a, :b)");
+                $stmt = $pdo->prepare("INSERT INTO categoria (categoria) VALUES (:a)");
                 $stmt->execute(array(
-                    ':a' => $requestData['login'],
-                    ':b' => md5($requestData['senha'])
+                    ':a' => utf8_decode($requestData['categoria']),
                 ));
                 $dados = array(
                     "tipo" => 'success',
-                    "mensagem" => 'Funcionário cadastrado com sucesso!'
+                    "mensagem" => 'Categoria cadastrada com sucesso!'
                 );
             }catch (PDOException $error){
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível realizar o cadastro do funcionário! Erro: '.$error
+                    "mensagem" => 'Não foi possível realizar o cadastro da categoria! Erro: '.$error
                 );
             }
         }else{
             try{
-                $stmt = $pdo->prepare("UPDATE funcionario SET login = :a, senha = :b WHERE  idfuncionario = :id");
+                $stmt = $pdo->prepare("UPDATE categoria SET categoria = :a WHERE  idcategoria = :id");
                 $stmt->execute(array(
                     ':id' => $ID,
-                    ':a' => utf8_decode($requestData['login']),
-                    ':b' => md5($requestData['senha'])
+                    ':a' => utf8_decode($requestData['categoria']),
                 ));
                 $dados = array(
                     "tipo" => 'success',
-                    "mensagem" => 'Funcionário atualizado com sucesso!'
+                    "mensagem" => 'Categoria atualizada com sucesso!'
                 );
             }catch (PDOException $error){
                 $dados = array(
                     "tipo" => 'error',
-                    "mensagem" => 'Não foi possível realizar a atualização da funcionário! Erro: '.$error
+                    "mensagem" => 'Não foi possível realizar a atualização da categoria! Erro: '.$error
                 );
             }
         }

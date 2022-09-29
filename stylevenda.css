@@ -44,20 +44,16 @@ body{
     position: absolute;
 }
 
-.novo-pedido, .visualizar-cliente{
+.novo-pedido{
     margin: 0.4rem;
     border-radius: 15px;
     padding: 8px;
     border: none;
     color: white;
-    width: 14vw;
+    width: 35vw;
     font-size: 15px;
     cursor:pointer;
     letter-spacing: 1px;
-    transition: 0.5s ease;
-}
-.novo-pedido:hover, .visualizar-cliente:hover{
-    transform: scale(1.04);
 }
 
 i{

@@ -1,27 +1,34 @@
 $(document).ready(function(){
-   
-    $('.excluir-produto').click(function(e){
-        e.preventDefault()
 
-        Swal.fire({
-            title: 'Você tem certeza?',
-            text: "Você está prestes a excluir o cadastro de um produto!",
-            icon: 'question',
-            iconColor: '#fff',
-            showCancelButton: true,
-            background: '#B21E35',
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sim, quero excluir!',
-            cancelButtonText: 'Cancelar'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire(
-                'Excluído!',
-                'O produto foi excluído com sucesso',
-                'success'
-              )
-            }
-          })
-    })
+  $('#tabela-produto').on('click', 'button.btn-excluir', function(e){
+      e.preventDefault()
+
+      let ID = `idproduto=${$(this).attr('id')}`
+
+      Swal.fire({
+          title: 'Você tem certeza que deseja excluir o registro deste produto?',
+          icon: 'question',
+          showCancelButton: true,
+          confirmButtonText: 'Sim',
+          cancelButtonText: 'Não'
+      }).then((result) => {
+          if(result.value){
+              $.ajax({
+                  type: 'POST',
+                  dataType: 'JSON',
+                  assync: true,
+                  data: ID,
+                  url: 'src/produtos/modelo/produto-excluir.php',
+                  success: function(dados){
+                        Swal.fire({
+                          title: dados.mensagem,
+                          icon: dados.tipo,
+                          confirmButtonText: 'Ok'
+                        })
+                        $('#tabela-produto').DataTable().ajax.reload()
+                  }
+              })
+          }
+      })
+  })
 })

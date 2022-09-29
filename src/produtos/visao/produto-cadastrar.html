@@ -1,28 +1,59 @@
-<div class = "cadastrar-produto">
+<div class="cadastrar-produto">
+
     <h2>Cadastrar Produto</h2>
-    <form>
-        <div class = "formulario-produto">
-            <div class ="form-group">
-                <label for="nome">
-                    <span><i class="fa-solid fa-tag"></i> Nome</span>
-                </label>
-                <input type="text" name="nome" id="nome" class="form-control inputNomeProduto">
-            </div>
-            <div class="form-group">
-                <label for="preco">
-                    <span><i class="fa-solid fa-dollar"></i> Preço</span>
-                </label>
-                <input type="text" name="preco" id="preco" class="form-control inputPreco">
-            </div>
-            <div class="form-group">
-                <label for="preco">
-                    <span><i class="fa-solid fa-list-ul"></i> Categoria</span>
-                </label>
-                <select name ="idcategoria" id="idcategoria" class="form-control selectCategoria">
-                    <option value="">Selecione a categoria</option>
+
+    <form id="form-produto">
+
+        <div class="form-group">
+            <label for="nome"><i class="fa-solid fa-tags"></i> Nome</label>
+            <input type="text" name="nome" id="nome" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="nome"><i class="fa-solid fa-brazilian-real-sign"></i> Preco</label>
+            <input type="text" name="preco" id="preco" class="form-control">
+            <small id="precoHelp" class="form-text text-muted text-white">Não utilize vírgulas.</small>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-9">
+                <select name="categoria_produto" id="categoria_produto" class="form-control">
+                    <option value="">Selecione a categoria...</option>
                 </select>
             </div>
-    <input type="hidden" name="ID" id="ID">
-    <button class="btn btn-success novo-produto">Cadastrar</button>
-</form>
+            <div class="form-group col-3">
+                <button class="btn btn-primary novo-categoria">Nova categoria</button>
+            </div>
+        </div>
+
+        <input type="hidden" name="ID" id="ID" class="form-control">
+
+        <button class="btn btn-success novo-produto">Cadastrar produto</button>
+
+    </form>
+
 </div>
+
+<div id="modal-categoria" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="my-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="my-modal-title">Title</h5>
+                <button class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Content</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary btn-salvar"><i class="fa-solid fa-floppy-disk"></i> Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/produtos/controle/categoria-novo.js"></script>
+<script src="src/produtos/controle/categoria-salvar.js"></script>
+<script src="src/produtos/controle/produto-novo.js"></script>
+<script src="src/produtos/controle/produto-salvar.js"></script>

@@ -1,18 +1,18 @@
 $(document).ready(function(){
    
-    $('.novo-cliente').click(function(e){
+    $('.btn-salvar').click(function(e){
         e.preventDefault()
 
-        let dados = $('#form-cliente').serialize()
+        let dados = $('#form-categoria').serialize()
 
-        dados += `&operacao=${$('.novo-cliente').attr('data-operation')}`
+        dados += `&operacao=${$('.btn-salvar').attr('data-operation')}`
 
         $.ajax({
             type: 'POST',
-            dataType: 'json',
+            dataType: 'JSON',
             assync: true,
             data: dados,
-            url: 'src/clientes/modelo/cliente-salvar.php',
+            url: 'src/produtos/modelo/categoria-salvar.php',
             success: function(dados) {
                 const Toast = Swal.mixin({
                     toast: true,
@@ -29,16 +29,8 @@ $(document).ready(function(){
                     icon: dados.tipo,
                     title: dados.mensagem
                   })
-                  $('#nome').empty()
-                  $('#celular').empty()
-                  $('#email').empty()
-                  $('#cep').empty()
-                  $('#cidade').empty()
-                  $('#uf').empty()
-                  $('#logradouro').empty()
-                  $('#bairro').empty()
-                  $('#numero').empty()
-            }
-        })
+                  $('#modal-categoria').modal('hide')
+        }
     })
+})
 })

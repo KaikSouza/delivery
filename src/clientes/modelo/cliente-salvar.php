@@ -10,11 +10,11 @@ if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'
     //Caso a variável venha vazia do formulário, retornar um erro
     $dados = array(
         "tipo" => 'error',
-        "mensagem" => 'Existe(m) campo(s) obrigatório(s) não preenchido(s)!'
+        "mensagem" => 'Existem campos obrigatórios não preenchidos!'
     );
 } else {
     //Caso os campos obrigatórios venham preenchidos, iremos realizar o cadastro
-    $ID = isset($requestData['ID']) ? $requestData['ID'] : '';
+    $ID = isset($requestData['idcliente']) ? $requestData['idcliente'] : '';
     $operacao = isset($requestData['operacao']) ? $requestData['operacao'] : '';
 
     //Verificação para cadastro ou atualização de registro
@@ -61,12 +61,12 @@ if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'
             ));
             $dados = array(
                 "tipo" => 'success',
-                "mensagem" => 'Cadastro atualizado com sucesso!'
+                "mensagem" => 'Atualizado com sucesso!'
             );
          } catch(PDOException $e){
             $dados = array(
                 "tipo" => 'error',
-                "mensagem" => 'Não foi possível atualizar o cadastro do cliente. Erro:'.$e
+                "mensagem" => 'Não foi possível atualizar o registro: '.$e
             );
          }
     }

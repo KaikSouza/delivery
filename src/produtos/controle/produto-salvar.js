@@ -14,16 +14,25 @@ $(document).ready(function(){
                 data: dados,
                 url: 'src/produtos/modelo/produto-salvar.php',
                 success: function(dados) {
-
-            Swal.fire({
-                icon: dados.tipo,
-                text: dados.mensagem,
-                confirmButtonText: 'OK'
-            })
-            $('#tabela-produto').DataTable().ajax.reload()
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 4000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                          toast.addEventListener('mouseenter', Swal.stopTimer)
+                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                      })
+                      Toast.fire({
+                        icon: dados.tipo,
+                        title: dados.mensagem
+                      })
+                      $('#nome').val("")
+                      $('#preco').val("")
+                      $('#categoria_produto').val("")
             }
         })
-        inputNome.value = ''
-        inputPreco.value = ''
     })
 })

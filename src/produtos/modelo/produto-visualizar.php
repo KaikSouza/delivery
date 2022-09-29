@@ -4,10 +4,10 @@
 include('../../conexao/conexao.php');
 
 //recepção do id a ser buscado no banco 
-$ID = $_REQUEST['idcliente'];
+$ID = $_REQUEST['idproduto'];
 
 //gerar nossa consulta sql no banco de dados
-$sql = "SELECT * FROM cliente WHERE idcliente = $ID";
+$sql = "SELECT * FROM produto WHERE idproduto = $ID";
 
 //executar a nossa query de consulta ao banco de dados
 $resultado = $pdo->query($sql);

@@ -19,10 +19,8 @@ body{
 }
 
 .produto {
-    width: 60vw;
     margin-top: 5rem;
     padding: 20px;
-    background-color: #202020;
     border-radius: 10px;
     box-shadow: 10px 10px 15px #0000006b;
 
@@ -59,58 +57,6 @@ body{
 .table td{
     border: none;
     padding: 8px;
-}
-
-.form-group{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.inputNomeProduto, .inputPreco{
-    width: 30vw;
-    padding: 10px;
-    margin: 2px;
-    border-radius: 15px;
-    background-color: #383838;
-    color: white;
-    box-shadow: 3px 3px 5px #0000006b;
-    outline: none;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    border: none;
-    transition: 0.5s ease;
-}
-.form-group input:hover{
-    transform: scale(1.02);
-}
-
-.form-group select{
-    width: 30vw;
-    padding: 10px;
-    margin: 2px;
-    background-color: #383838;
-    color: white;
-    box-shadow: 3px 3px 5px #0000006b;
-    outline: none;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    border: none;
-}
-
-.novo-produto{
-    border-radius: 15px;
-    padding: 8px;
-    border: none;
-    color: white;
-    width: 30vw;
-    font-weight: 800;
-    font-size: 15px;
-    cursor:pointer;
-    letter-spacing: 2px;
-    transition: 0.5s ease;
-    margin: 0.4rem;
 }
 
 i{

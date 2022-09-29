@@ -1,11 +1,11 @@
 $(document).ready(function(){
    
-    $('.novo-cliente').click(function(e){
+    $('.btn-salvar').click(function(e){
         e.preventDefault()
 
-        let dados = $('#form-cliente').serialize()
+        let dados = $('#form-cliente-editar').serialize()
 
-        dados += `&operacao=${$('.novo-cliente').attr('data-operation')}`
+        dados += `&operacao=${$('.btn-salvar').attr('data-operation')}`
 
         $.ajax({
             type: 'POST',
@@ -29,15 +29,8 @@ $(document).ready(function(){
                     icon: dados.tipo,
                     title: dados.mensagem
                   })
-                  $('#nome').empty()
-                  $('#celular').empty()
-                  $('#email').empty()
-                  $('#cep').empty()
-                  $('#cidade').empty()
-                  $('#uf').empty()
-                  $('#logradouro').empty()
-                  $('#bairro').empty()
-                  $('#numero').empty()
+                  $('#modal-cliente').modal('hide')
+                  $('#tabela-cliente').DataTable().ajax.reload()
             }
         })
     })

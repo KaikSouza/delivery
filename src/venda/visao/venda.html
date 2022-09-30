@@ -1,12 +1,14 @@
 <div class="vendas">
     <h2>Vendas realizadas</h2>
     <div class="table-responsive">
-        <table class="table table-hover" id="tabela-vendas">
+        <table class="table table-hover" id="tabela-venda">
             <thead class="thead">
                 <tr>
                     <th scope="col" class="text-center">#</th>
-                    <th scope="col" class="text-center">Produto</th>
                     <th scope="col" class="text-center">Cliente</th>
+                    <th scope="col" class="text-center">Produto</th>
+                    <th scope="col" class="text-center">Data do pedido</th>
+                    <th scope="col" class="text-center">Data da entrega</th>
                     <th scope="col" class="text-center">Cancelar</th>
                 </tr>
             </thead>
@@ -16,3 +18,8 @@
         </table>
     </div>
 </div>
+
+<script src="src/venda/controle/venda-excluir.js"></script>
+<script src="src/venda/controle/venda-listar.js"></script>
+<script src="src/venda/controle/venda-novo.js"></script>
+<script src="src/venda/controle/venda-salvar.js"></script>

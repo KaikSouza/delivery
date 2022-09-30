@@ -1,6 +1,3 @@
-<?php
-include('conexao/conexao.php'); 
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +14,8 @@ include('conexao/conexao.php');
     <link rel="stylesheet" href="styleproduto.css">
     <link rel="stylesheet" href="stylevenda.css">
     <link rel="stylesheet" href="libs/DataTables/datatables.css">
-    <title>Michelly Presentes - Painel de Controle</title>
+    <link rel="stylesheet" href="libs/DataTables/Buttons/css/buttons.dataTables.css">
+    <title>Michelly Presentes</title>
 </head>
 
 <body>
@@ -28,7 +26,7 @@ include('conexao/conexao.php');
             <span class="navbar-toggler-icon"></span>
         </button>
     <div id="my-nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto justify-content-center">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a href="home.html" class="nav-link text-white"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
             </li>
@@ -106,6 +104,12 @@ include('conexao/conexao.php');
     <script src="libs/sweetAlert/dist/sweetalert2.all.js"></script>
     <script src="js/menu.js"></script>
     <script src="libs/DataTables/datatables.js"></script>
+    <script src="libs/DataTables/Buttons/js/dataTables.buttons.js"></script>
+    <script src="libs/DataTables/Buttons/js/buttons.print.js"></script>
+    <script src="libs/DataTables/Buttons/js/buttons.html5.js"></script>
+    <script src="libs/DataTables/Buttons/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="src/funcionario/controle/logout-funcionario.js"></script>
     <script src="src/funcionario/controle/validar-funcionario.js"></script>
 

@@ -39,9 +39,12 @@ CREATE TABLE `produto` (
 ENGINE = InnoDB;
 
 CREATE TABLE `venda` (
+  `idvenda` INT NOT NULL AUTO_INCREMENT,
   `cliente_idcliente` INT NOT NULL,
   `produto_idproduto` INT NOT NULL,
-  PRIMARY KEY (`cliente_idcliente`, `produto_idproduto`),
+  `data_pedido` DATE NOT NULL,
+  `data_entrega` DATE NOT NULL,
+  PRIMARY KEY (`idvenda`, `cliente_idcliente`, `produto_idproduto`),
   INDEX `fk_cliente_has_produto_produto1_idx` (`produto_idproduto` ASC) ,
   INDEX `fk_cliente_has_produto_cliente1_idx` (`cliente_idcliente` ASC) ,
   CONSTRAINT `fk_cliente_has_produto_cliente1`

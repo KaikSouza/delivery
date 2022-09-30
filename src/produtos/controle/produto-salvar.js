@@ -27,7 +27,13 @@ $(document).ready(function(){
                       })
                       Toast.fire({
                         icon: dados.tipo,
-                        title: dados.mensagem
+                        title: dados.mensagem,
+                        showClass: {
+                          popup: 'animate__animated animate__fadeInDown'
+                      },
+                      hideClass: {
+                          popup: 'animate__animated animate__fadeOutUp'
+                      }
                       })
                       $('#nome').val("")
                       $('#preco').val("")

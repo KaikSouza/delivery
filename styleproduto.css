@@ -63,9 +63,26 @@ i{
     padding:2px;
 }
 
-.produto-editar{
+.page-item.active .page-link{
+ margin-right: 0.25rem;
+ margin-left: 0.25rem;
+ background-color: #B21E35;
+ border-radius: 100%;
+ border-color: #B21E35;
+}
+
+.page-item.next.disabled .page-link{
+    margin-left: 0.25rem;
+    border-radius: 5px;
+    background-color: #202020;
     color: #fff;
-    background-color: #0167ff;
-    border-radius: 100px;
+    border: none;
+}
+
+.page-item.previous.disabled .page-link{
+    margin-right: 0.25rem;
+    border-radius: 5px;
+    background-color: #202020;
+    color: #fff;
     border: none;
 }

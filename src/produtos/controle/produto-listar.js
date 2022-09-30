@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#tabela-produto').DataTable({
-        "processing": true,
         "serverSide": true,
+        "processing": true,
         "ajax": {
             "url": "src/produtos/modelo/produto-listar.php",
             "type": "POST"
@@ -9,6 +9,8 @@ $(document).ready(function() {
         "language": {
             "url": "libs/DataTables/pt_br.json"
         },
+        dom: 'Bfrtip',
+        buttons: ['print', 'pdf'],
         "columns": [{
                 "data": 'idproduto',
                 "className": 'text-center'
@@ -33,7 +35,7 @@ $(document).ready(function() {
                 "render": function(data, type, row, meta) {
                     return `
                     <button id="${data}" class="btn btn-success btn-sm btn-visualizar"><i class="fa fa-eye"></i></button>
-                    <button id="${data}" class="btn btn-info btn-sm btn-editar"><i class="fa fa-pencil"></i></button>
+                    <button id="${data}" class="btn btn-primary btn-sm btn-editar"><i class="fa fa-pencil"></i></button>
                     <button id="${data}" class="btn btn-danger btn-sm btn-excluir"><i class="fa fa-trash"></i></button>
                     `
                 }

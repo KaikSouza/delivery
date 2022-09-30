@@ -2,7 +2,7 @@
 
 session_start();
 
-if(!isset($_SESSION['ID'])){
+if(!isset($_SESSION['idfuncionario'])){
     $dados = array(
         'tipo' => 'error',
         'mensagem' => 'Você não realizou o login no sistema!'

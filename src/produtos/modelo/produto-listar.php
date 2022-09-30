@@ -16,10 +16,10 @@ $sql = "SELECT p.idproduto, p.nome, truncate(p.preco,2) AS novo_preco, c.categor
   $filtro = $requestData['search']['value'];
   if( !empty( $filtro ) ){
       
-      $sql .= " AND (idproduto LIKE '$filtro%' ";
+      $sql .= " AND (idvenda LIKE '$filtro%' ";
       $sql .= " OR nome LIKE '$filtro%' ";
-      $sql .= " OR novo_preco LIKE '$filtro%' ";
-      $sql .= " OR categoria_produto LIKE '$filtro%') ";
+      $sql .= " OR preco LIKE '$filtro%' ";
+      $sql .= " OR categoria LIKE '$filtro%') ";
   }
   
   

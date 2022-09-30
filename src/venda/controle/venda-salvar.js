@@ -31,6 +31,8 @@ $(document).ready(function(){
                   })
                   $('#cliente_idcliente').val("")
                   $('#produto_idproduto').val("")
+                  $('#data_pedido').val("")
+                  $('#data_entrega').val("")
         }
     })
 })

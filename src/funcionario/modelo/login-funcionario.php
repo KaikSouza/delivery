@@ -7,7 +7,7 @@ $sql = $pdo->query("SELECT *, count(idfuncionario) as qtde FROM funcionario WHER
 while($resultado = $sql->fetch(PDO::FETCH_ASSOC)){
     if($resultado ['qtde'] == 1){
         session_start();
-        $_SESSION['ID'] = $resultado['ID'];
+        $_SESSION['idfuncionario'] = $resultado['idfuncionario'];
         $dados = array(
             'tipo' => 'success',
             'mensagem' => 'Login efetuado com sucesso!'

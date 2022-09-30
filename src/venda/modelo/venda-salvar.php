@@ -7,7 +7,7 @@ include('../../conexao/conexao.php');
 $requestData = $_REQUEST;
 
 //Verificação  de campos obrigatórios do formulário
-if(empty($requestData['cliente_idcliente']) && empty($requestData['produto_idproduto'])){
+if(empty($requestData['cliente_idcliente']) && empty($requestData['produto_idproduto']) && empty($requestData['data_pedido']) && empty($requestData['data_entrega'])){
     //Caso a varável venha vazia do formulário, retornar um erro
     $dados = array(
         "tipo" => 'error',
@@ -22,10 +22,12 @@ if(empty($requestData['cliente_idcliente']) && empty($requestData['produto_idpro
     if($operacao == 'insert'){
         //Comandos para o INSERT no banco de dados ocorram
         try{
-            $stmt = $pdo->prepare('INSERT INTO venda (cliente_idcliente, produto_idproduto) VALUES (:a, :b)');
+            $stmt = $pdo->prepare('INSERT INTO venda (cliente_idcliente, produto_idproduto, data_pedido, data_entrega) VALUES (:a, :b, :c, :d)');
             $stmt->execute(array(
                 ':a' => $requestData['cliente_idcliente'],
-                ':b' => $requestData['produto_idproduto']
+                ':b' => $requestData['produto_idproduto'],
+                ':c' => $requestData['data_pedido'],
+                ':d' => $requestData['data_entrega']
             ));
             $dados = array(
                 "tipo" => 'success',
@@ -40,11 +42,13 @@ if(empty($requestData['cliente_idcliente']) && empty($requestData['produto_idpro
     } else{
         //Se a nossa operação vier vazia, iremos realizar um update
         try{
-            $stmt = $pdo->prepare('UPDATE pedido SET cliente_idcliente = :a, produto_idproduto = :b WHERE idvenda = :id');
+            $stmt = $pdo->prepare('UPDATE pedido SET cliente_idcliente = :a, produto_idproduto = :b, data_pedido = :c, data_entrega = :d WHERE idvenda = :id');
             $stmt->execute(array(
                 ':id' => $ID,
                 ':a' => $requestData['cliente_idcliente'],
-                ':b' => $requestData['produto_idproduto']
+                ':b' => $requestData['produto_idproduto'],
+                ':c' => $requestData['data_pedido'],
+                ':d' => $requestData['data_entrega']
             ));
             $dados = array(
                 "tipo" => 'success',

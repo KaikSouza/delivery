@@ -6,7 +6,6 @@ $(document).ready(function(){
             type: 'POST',
             dataType: 'json',
             assync: true,
-            data: dados,
             url: 'src/funcionario/modelo/logout-funcionario.php',
             success: function(dados){
                 if(dados.tipo == 'success'){

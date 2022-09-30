@@ -10,7 +10,13 @@ $(document).ready(function(){
           icon: 'question',
           showCancelButton: true,
           confirmButtonText: 'Sim',
-          cancelButtonText: 'Não'
+          cancelButtonText: 'Não',
+          showClass: {
+            popup: 'animate__animated animate__zoomIn'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__zoomOut'
+        }
       }).then((result) => {
           if(result.value){
               $.ajax({
@@ -23,7 +29,10 @@ $(document).ready(function(){
                         Swal.fire({
                           title: dados.mensagem,
                           icon: dados.tipo,
-                          confirmButtonText: 'Ok'
+                          confirmButtonText: 'Ok',
+                          hideClass: {
+                            popup: 'animate__animated animate__zoomOut'
+                        }
                         })
                         $('#tabela-produto').DataTable().ajax.reload()
                   }

@@ -10,7 +10,66 @@ $(document).ready(function() {
             "url": "libs/DataTables/pt_br.json"
         },
         dom: 'Bfrtip',
-        buttons: ['print', 'pdf'],
+        buttons: [
+            {
+                extend: 'colvis',
+                text: 'Visualizar colunas'
+            },
+            {
+                extend: 'print',
+                text: '<i class="fa-solid fa-print"></i>',
+                titleAttr: 'Imprimir',
+                pageSize: 'A4',
+                aligment: 'center',
+                exportOptions: {
+                    columns: [0,1,2,3,4]
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                text: '<i class="fa-solid fa-file-pdf"></i>',
+                titleAttr: 'PDF',
+                filename: 'Relatório de pedidos',
+                pageSize: 'A4',
+                aligment: 'left',
+                exportOptions: {
+                    columns: [0,1,2,3,4]
+                },
+                customize: function(doc){
+                    doc['header']=(function(){
+                        return{
+                            columns: [
+                                {
+                                    aligment: 'right',
+                                    italics: true,
+                                    text: 'Relatório de pedidos',
+                                    fontSize: 12,
+                                    margin: [10,0]
+                                },
+                                {
+                                    aligment: 'left',
+                                    italics: true,
+                                    text: 'Michelly Presentes',
+                                    fontSize: 12,
+                                    margin: [10,0]
+                                }
+                            ]
+                        }
+                    })
+                    doc['footer']=(function(){
+                        return{
+                            columns: [
+                                {
+                                    aligment: 'left',
+                                    text: 'Lins, ____________________ de __________. Assinatura: _____________________________________.',
+                                    margin: [10,0]
+                                }
+                            ]
+                        }
+                })
+            }
+        }
+        ],
         "columns": [{
                 "data": 'idvenda',
                 "className": 'text-center'

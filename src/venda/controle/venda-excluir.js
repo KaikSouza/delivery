@@ -7,7 +7,7 @@ $(document).ready(function(){
   
         Swal.fire({
             title: 'Você tem certeza que deseja excluir este pedido?',
-            icon: 'question',
+            icon: 'warning',
             showCancelButton: true,
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não',

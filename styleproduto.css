@@ -63,26 +63,77 @@ i{
     padding:2px;
 }
 
-.page-item.active .page-link{
+.paginate_button.page-item.active .page-link{
  margin-right: 0.25rem;
  margin-left: 0.25rem;
  background-color: #B21E35;
  border-radius: 100%;
- border-color: #B21E35;
+ border: none;
 }
+
+.page-link:focus{
+    box-shadow: none;
+}
+
+.paginate_button.page-item .page-link{
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    background-color: #7e7e7e83;
+    color: #fff;
+    border-radius: 100%;
+    border: none;
+   }
 
 .page-item.next.disabled .page-link{
     margin-left: 0.25rem;
-    border-radius: 5px;
-    background-color: #202020;
+    border-radius: 20px;
+    background-color: #7e7e7e83;
+    color: #fff;
+    border: none;
+}
+
+.page-item.next .page-link{
+    margin-left: 0.25rem;
+    border-radius: 20px;
+    background-color: #B21E35;
     color: #fff;
     border: none;
 }
 
 .page-item.previous.disabled .page-link{
     margin-right: 0.25rem;
-    border-radius: 5px;
-    background-color: #202020;
+    border-radius: 20px;
+    background-color: #7e7e7e83;
     color: #fff;
+    border: none;
+}
+
+.page-item.previous .page-link{
+    margin-right: 0.25rem;
+    border-radius: 20px;
+    background-color: #B21E35;
+    color: #fff;
+    border: none;
+}
+
+.dt-button.buttons-print{
+    background-color: #007bff;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+.dt-button:hover.buttons-print:hover{
+    background-color: #007bff;
+    border: none;
+}
+
+.dt-button.buttons-pdf.buttons-html5{
+    background-color: #ff0026;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+}
+.dt-button:hover.buttons-pdf:hover.buttons-html5:hover{
+    background-color: #ff0026;
     border: none;
 }

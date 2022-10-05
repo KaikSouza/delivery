@@ -137,3 +137,19 @@ i{
     background-color: #ff0026;
     border: none;
 }
+
+.dt-button.buttons-collection.buttons-colvis{
+    background-color: #259A40;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+.dt-down-arrow{
+    color: #fff;
+}
+.dt-button.buttons-collection.buttons-colvis:hover{
+    background-color: #259A40;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}

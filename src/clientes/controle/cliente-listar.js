@@ -84,9 +84,9 @@ $(document).ready(function() {
                 "className": 'text-center',
                 "render": function(data, type, row, meta) {
                     return `
-                    <button id="${data}" class="btn btn-success btn-sm btn-pedido"><i class="fa-solid fa-plus"></i></button>
+                    <button id="${data}" class="btn btn-warning text-black btn-sm btn-pedido"><i class="fa-solid fa-plus"></i></button>
                     <button id="${data}" class="btn btn-success btn-sm btn-visualizar"><i class="fa fa-eye"></i></button>
-                    <button id="${data}" class="btn btn-info btn-sm btn-editar"><i class="fa fa-pencil"></i></button>
+                    <button id="${data}" class="btn btn-primary btn-sm btn-editar"><i class="fa fa-pencil"></i></button>
                     <button id="${data}" class="btn btn-danger btn-sm btn-excluir"><i class="fa fa-trash"></i></button>
                     `
                 }

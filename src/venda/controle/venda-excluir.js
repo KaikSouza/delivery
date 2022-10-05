@@ -12,10 +12,10 @@ $(document).ready(function(){
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não',
             showClass: {
-              popup: 'animate__animated animate__zoomIn'
+              popup: 'animate__animated animate__fadeInDown'
           },
           hideClass: {
-              popup: 'animate__animated animate__zoomOut'
+              popup: 'animate__animated animate__fadeOutUp'
           }
         }).then((result) => {
             if(result.value){
@@ -30,8 +30,11 @@ $(document).ready(function(){
                             title: dados.mensagem,
                             icon: dados.tipo,
                             confirmButtonText: 'Ok',
+                            showClass: {
+                                popup: 'animate__animated animate__fadeInDown'
+                            },
                             hideClass: {
-                              popup: 'animate__animated animate__zoomOut'
+                              popup: 'animate__animated animate__fadeOutUp'
                           }
                           })
                           $('#tabela-venda').DataTable().ajax.reload()

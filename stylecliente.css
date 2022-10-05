@@ -73,6 +73,15 @@ body{
     border-radius: 100%;
     border: none;
     font-size: 15px;
+    margin-right: 13px;
+    margin-left: 13px;
+}
+.btn-pedido{
+    border-radius: 100%;
+    border: none;
+    font-size: 15px;
+    margin-right: 13px;
+    margin-left: 13px;
 }
 
 i{

@@ -97,7 +97,7 @@ $(document).ready(function() {
                 "className": 'text-center',
                 "render": function(data, type, row, meta) {
                     return `
-                    <button id="${data}" class="btn btn-danger btn-sm btn-excluir"><i class="fa fa-trash"></i></button>
+                    <button id="${data}" class="btn btn-danger btn-sm btn-excluir"><i class="fa-regular fa-circle-xmark"></i></button>
                     `
                 }
             }

@@ -7,7 +7,7 @@ $(document).ready(function() {
         url: 'src/produtos/modelo/all-categoria.php',
         success: function(dados){
             for(const result of dados){
-                $('#categoria_produto').append(`<option value="${result.idcategoria}">${result.categoria}</option>`)
+                $('#categoria_idcategoria').append(`<option value="${result.idcategoria}">${result.categoria}</option>`)
             }
         }
     })

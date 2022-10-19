@@ -1,9 +1,9 @@
 <?php
 // Carregar as credenciais do banco de dados
-    $hostname = "sql305.epizy.com";
-    $database = "epiz_31920114_delivery";
-    $user = "epiz_31920114";
-    $password = "9j49EHLcv0DGAS";
+    $hostname = "localhost:3307";
+    $database = "delivery";
+    $user = "root";
+    $password = "usbw";
 
     try{
         $pdo = new PDO('mysql:host='.$hostname.';dbname='.$database, $user, $password);

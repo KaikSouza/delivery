@@ -6,7 +6,9 @@ include('../../conexao/conexao.php');
 $requestData = $_REQUEST;
 
 //Verificação  de campos obrigatórios do formulário
-if(empty($requestData['nome'] && $requestData['celular'] && $requestData['email'] && $requestData['cep'] && $requestData['uf'] && $requestData['cidade'] && $requestData['logradouro'] && $requestData['bairro'] && $requestData['numero'])){
+if(empty($requestData['nome']) && empty($requestData['celular']) && empty($requestData['email']) 
+&& empty($requestData['cep']) && empty($requestData['uf']) && empty($requestData['cidade']) && empty($requestData['logradouro']) && empty($requestData['bairro']) 
+&& empty($requestData['numero'])){
     //Caso a variável venha vazia do formulário, retornar um erro
     $dados = array(
         "tipo" => 'error',

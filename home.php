@@ -1,3 +1,7 @@
+<?php
+include('src/conexao/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +31,7 @@
     <div id="my-nav" class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a href="home.html" class="nav-link text-white"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+                <a href="home.php" class="nav-link text-white"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navdropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-plus"></i> Cadastrar</a>
@@ -63,8 +67,16 @@
             <div class="card-cliente">
                 <img src="https://img.icons8.com/fluency/96/undefined/user-group-man-woman.png"/>
                 <div class="quantidade-cliente">
-                <span class="qtd-cliente">
-                </span>
+                <span>
+                    <?php
+                      $query_cliente = "SELECT COUNT(idcliente) AS qtd_cliente FROM cliente where 1=1";
+                      $result_cliente = $pdo->prepare($query_cliente);
+                      $result_cliente->execute();
+                        
+                      $row_cliente = $result_cliente->fetch(PDO::FETCH_ASSOC);                      
+                      echo $row_cliente['qtd_cliente'];
+                    ?>
+                    </span>
                 </div>
                 <div class="texto-cliente">
                     <span>clientes cadastrados</span>
@@ -74,6 +86,14 @@
                 <img src="https://img.icons8.com/fluency/96/000000/price-tag.png"/>
                 <div class="quantidade-produto">
                 <span>
+                    <?php
+                      $query_produto = "SELECT COUNT(idproduto) AS qtd_produto FROM produto where 1=1";
+                      $result_produto = $pdo->prepare($query_produto);
+                      $result_produto->execute();
+                        
+                      $row_produto = $result_produto->fetch(PDO::FETCH_ASSOC);                      
+                      echo $row_produto['qtd_produto'];
+                    ?>
                     </span>
                 </div>
                 <div class="texto-produto">
@@ -84,6 +104,14 @@
                 <img src="https://img.icons8.com/fluency/96/000000/in-transit.png"/>
                 <div class="quantidade-pedido">
                 <span>
+                    <?php
+                      $query_pedido = "SELECT COUNT(idvenda) AS qtd_pedido FROM venda where 1=1";
+                      $result_pedido = $pdo->prepare($query_pedido);
+                      $result_pedido->execute();
+                        
+                      $row_pedido = $result_pedido->fetch(PDO::FETCH_ASSOC);                      
+                      echo $row_pedido['qtd_pedido'];
+                    ?>
                     </span>
                 </div>
                 <div class="texto-pedido">
@@ -94,6 +122,15 @@
                 <img src="https://img.icons8.com/fluency/96/undefined/stocks-growth.png"/>
                 <div class="quantidade-faturamento">
                     <span>
+                         <?php
+                           // $query_pedido = "SELECT SUM(preco) AS precototal_pedidos FROM pedido where 1=1";
+                           // $result_pedido = $pdo->prepare($query_pedido);
+                           // $result_pedido->execute();
+                        
+                           // $row_pedido = $result_pedido->fetch(PDO::FETCH_ASSOC);
+                            // var_dump($row_fornecedor);
+                           // echo 'R$'.$row_pedido['precototal_pedidos'];
+                            ?>
                     </span>
                 </div>
             </div>
@@ -115,8 +152,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="libs/DataTables/Buttons/js/buttons.colVis.js"></script>
     <script src="src/funcionario/controle/logout-funcionario.js"></script>
-    <script src="src/funcionario/controle/validar-funcionario.js"></script>
-    <script src="src/clientes/controle/qtd-cliente.js"></script>
+    <!-- <script src="src/funcionario/controle/validar-funcionario.js"></script> -->
 
 </body>
 

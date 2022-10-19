@@ -22,11 +22,11 @@ if(empty($requestData['nome']) && empty($requestData['preco']) && empty($request
     if($operacao == 'insert'){
         //Comandos para o INSERT no banco de dados ocorram
         try{
-            $stmt = $pdo->prepare('INSERT INTO produto (nome, preco, categoria_produto) VALUES (:a, :b, :c)');
+            $stmt = $pdo->prepare('INSERT INTO produto (nome, preco, categoria_idcategoria) VALUES (:a, :b, :c)');
             $stmt->execute(array(
                 ':a' => utf8_decode($requestData['nome']),
                 ':b' => $requestData['preco'],
-                ':c' => $requestData['categoria_produto']
+                ':c' => $requestData['categoria_idcategoria']
             ));
             $dados = array(
                 "tipo" => 'success',
@@ -46,7 +46,7 @@ if(empty($requestData['nome']) && empty($requestData['preco']) && empty($request
                 ':id' => $ID,
                 ':a' => utf8_decode($requestData['nome']),
                 ':b' => $requestData['preco'],
-                ':c' => $requestData['categoria_produto']
+                ':c' => $requestData['categoria_idcategoria']
             ));
             $dados = array(
                 "tipo" => 'success',

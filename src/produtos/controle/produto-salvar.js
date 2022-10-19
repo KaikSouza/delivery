@@ -37,7 +37,7 @@ $(document).ready(function(){
                       })
                       $('#nome').val("")
                       $('#preco').val("")
-                      $('#categoria_produto').val("")
+                      $('#categoria_idcategoria').val("")
             }
         })
     })

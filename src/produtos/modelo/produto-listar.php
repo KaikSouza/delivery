@@ -7,7 +7,7 @@ $requestData = $_REQUEST;
  
 $colunas = $requestData['columns'];
 
-$sql = "SELECT p.idproduto, p.nome, truncate(p.preco,2) AS novo_preco, c.categoria FROM produto p LEFT JOIN categoria c ON p.categoria_produto = c.idcategoria WHERE 1=1";
+$sql = "SELECT p.idproduto, p.nome, truncate(p.preco,2) AS novo_preco, c.categoria FROM produto p LEFT JOIN categoria c ON p.categoria_idcategoria = c.idcategoria WHERE 1=1";
 
   $resultado = $pdo->query($sql);
   $qtdeLinhas = $resultado->rowCount();

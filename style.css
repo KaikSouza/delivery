@@ -68,3 +68,6 @@ i{
 .nav-item{
     cursor: pointer;
 }
+.btn-logout{
+    cursor: pointer;
+}

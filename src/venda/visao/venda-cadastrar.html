@@ -11,11 +11,25 @@
             </select>
         </div>
 
-        <div class="form-group">
-            <label><i class="fa-solid fa-tag"></i> Produto</label>
-            <select multiple name="produto_idproduto[]" id="produto_idproduto" class="form-control">
-            </select>
+        <div class="form-row" id="pesquisar">
+            <div class="form-group col-8">
+                <input type="text" name="pesquisar" id="pesquisar" placeholder="Buscar produto...">
+            </div>
+            <div class="form-group col-4">
+                <button class="btn btn-success pesquisar"><i class="fa-solid fa-search"></i></button>
+            </div>
         </div>
+
+        <div class="form-group" id="all-produtos">
+
+        </div>
+        <!--<
+            div class="form-check">
+                <label><i class="fa-solid fa-tag"></i> Produto</label>
+                <select multiple name="produto_idproduto[]" id="produto_idproduto" class="form-control">
+                </select>
+            </div>
+        -->
 
          <div class="form-row">
             <div class="form-group col-6">
@@ -40,3 +54,4 @@
 
 <script src="src/venda/controle/venda-novo.js"></script>
 <script src="src/venda/controle/venda-salvar.js"></script>
+<script src="src/venda/controle/desmarcar-produtos.js"></script>

@@ -51,7 +51,6 @@ CREATE TABLE IF NOT EXISTS `produto_has_cliente` (
   `produto_idproduto` INT NOT NULL,
   `cliente_idcliente` INT NOT NULL,
   `venda_idvenda` INT NOT NULL,
-  PRIMARY KEY (`produto_idproduto`, `cliente_idcliente`),
   INDEX `fk_produto_has_cliente_cliente1_idx` (`cliente_idcliente` ASC),
   INDEX `fk_produto_has_cliente_produto1_idx` (`produto_idproduto` ASC),
   INDEX `fk_produto_has_cliente_venda1_idx` (`venda_idvenda` ASC),

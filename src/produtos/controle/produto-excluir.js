@@ -10,13 +10,7 @@ $(document).ready(function(){
           icon: 'question',
           showCancelButton: true,
           confirmButtonText: 'Sim',
-          cancelButtonText: 'Não',
-          showClass: {
-            popup: 'animate__animated animate__zoomIn'
-        },
-        hideClass: {
-            popup: 'animate__animated animate__zoomOut'
-        }
+          cancelButtonText: 'Não'
       }).then((result) => {
           if(result.value){
               $.ajax({

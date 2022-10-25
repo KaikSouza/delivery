@@ -30,9 +30,8 @@ $(document).ready(function(){
                     title: dados.mensagem
                   })
                   $('#cliente_idcliente').val("")
-                  $('#produto_idproduto').val("")
                   $('#data_pedido').val("")
-                  $('#data_entrega').val("")
+                  $('#datavenda').val("")
         }
     })
 })
